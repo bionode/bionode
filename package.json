@@ -1,0 +1,42 @@
+{
+  "name": "bionode",
+  "description": "A Node.js JavaScript library for client and server side bioinformatics",
+  "version": "0.0.1",
+  "homepage": "http://bionode.io",
+  "repository": "git://github.com/bionode/bionode.git",
+  "author": {
+    "name": "Bruno Vieira",
+    "email": "mail@bmpvieira.com"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "~1.17.0",
+    "should": "~3.0.1",
+    "istanbul": "~0.2.4",
+    "coveralls": "~2.6.1",
+    "gulp": "~3.4.0",
+    "gulp-util": "~2.2.12",
+    "gulp-livereload": "~0.2.0",
+    "tiny-lr": "0.0.5",
+    "webpack": "~1.0.0-beta7",
+    "docco": "~0.6.2"
+  },
+  "keywords": [
+    "bioinformatics",
+    "genomics",
+    "genetics",
+    "dna",
+    "util",
+    "server",
+    "client",
+    "browser"
+  ],
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec",
+    "coverage": "istanbul cover node_modules/.bin/_mocha --report lcovonly -- -R spec && rm -rvf ./coverage",
+    "build-browser": "webpack",
+    "build-docs": "docco ./lib/bionode.js"
+  },
+  "license": "MIT"
+}
