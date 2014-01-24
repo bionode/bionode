@@ -1,7 +1,7 @@
 {
   "name": "bionode",
   "description": "A Node.js JavaScript library for client and server side bioinformatics",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "homepage": "http://bionode.io",
   "repository": "git://github.com/bionode/bionode.git",
   "author": {
@@ -11,6 +11,7 @@
   "dependencies": {},
   "devDependencies": {
     "mocha": "~1.17.0",
+    "mocha-lcov-reporter": "0.0.1",
     "should": "~3.0.1",
     "istanbul": "~0.2.4",
     "coveralls": "~2.6.1",
@@ -34,7 +35,8 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --reporter spec",
-    "coverage": "istanbul cover node_modules/.bin/_mocha --report lcovonly -- -R spec && rm -rvf ./coverage",
+    "coverage": "istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- -R spec && rm -rf ./coverage",
+    "coveralls": "istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/.bin/coveralls && rm -rf ./coverage",
     "build-browser": "webpack",
     "build-docs": "docco ./lib/bionode.js"
   },

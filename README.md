@@ -1,5 +1,4 @@
-bionode
-=======
+# bionode [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url] [![Dependency Status](https://david-dm.org/bionode/bionode.png?theme=shields.io)](https://david-dm.org/bionode/bionode)
 
 > A Node.js JavaScript library for client and server side bioinformatics.
 
@@ -59,3 +58,12 @@ License
 -------
 
 bionode is licensed under the [MIT](https://raw.github.com/bionode/bionode/master/LICENSE) license.
+
+[npm-url]: https://npmjs.org/package/bionode
+[npm-image]: https://badge.fury.io/js/bionode.png
+[travis-url]: https://travis-ci.org/bionode/bionode
+[travis-image]: https://travis-ci.org/bionode/bionode.png?branch=master
+[coveralls-url]: https://coveralls.io/r/bionode/bionode
+[coveralls-image]: https://coveralls.io/repos/bionode/bionode/badge.png
+[depstat-url]: https://david-dm.org/bionode/bionode
+[depstat-image]: https://david-dm.org/bionode/bionode.png
