@@ -11,6 +11,12 @@ Install bionode with [npm](https://npmjs.org/):
 $ npm install bionode
 ```
 
+You can also install it for client side with [bower](http://bower.io)
+
+```sh
+$ bower install bionode
+```
+
 Alternatively, just include `bionode.min.js` via a `<script/>` in your page.
 
 
@@ -25,7 +31,7 @@ var bionode = require('bionode')
 
 In-browser, `bionode` is available as a global variable.
 
-Please check the [documentation](https://rawgithub.com/bionode/bionode/master/docs/bionode.html) for the methods exposed by bionode.
+Please read the [documentation](https://rawgithub.com/bionode/bionode/master/docs/bionode.html) for the methods exposed by bionode.
 
 
 Contributing
@@ -39,17 +45,20 @@ Please write unit tests for your code, and check that everything works by runnin
 $ npm test
 ```
 
-Also check for code coverage:
+Please also check for code coverage:
+
 ```sh
 $ npm run coverage
 ```
 
-To rebuild and minify the module for the browser do:
+To rebuild and minify the module for the browser:
+
 ```sh
 $ npm run build-browser
 ```
 
-To rebuild the documentation from the comments in the code, run:
+To rebuild the documentation using the comments in the code:
+
 ```sh
 $ npm run build-docs
 ```

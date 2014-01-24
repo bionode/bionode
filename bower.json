@@ -1,0 +1,26 @@
+{
+  "name": "bionode",
+  "description": "A Node.js JavaScript library for client and server side bioinformatics.",
+  "version": "0.0.3",
+  "homepage": "bionode.io",
+  "repository": { "type": "git", "url": "git://github.com/bionode/bionode.git" },
+  "authors": [ "Bruno Vieira <mail@bmpvieira.com> (http://bmpvieira.com)" ],
+  "license": "MIT",
+  "main": "bionode.min.js",
+  "keywords": [
+    "bioinformatics",
+    "genomics",
+    "genetics",
+    "dna",
+    "util",
+    "server",
+    "client",
+    "browser"
+  ],
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test"
+  ]
+}
