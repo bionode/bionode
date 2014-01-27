@@ -266,7 +266,7 @@ _transcribeBasesMatrix[<span class="hljs-string">'t'</span>] = <span class="hljs
             </div>
             
             <div class="content"><div class='highlight'><pre>Bionode.prototype.findNonCanonicalSplices = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(sequence, exonsRanges)</span> {</span>
-  <span class="hljs-keyword">var</span> nonCanonicalIntronsRanges = []
+  <span class="hljs-keyword">var</span> nonCanonicalSplices = []
   <span class="hljs-keyword">var</span> exonsRangesSorted = exonsRanges.sort(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(a, b)</span> {</span> <span class="hljs-keyword">return</span> a[<span class="hljs-number">0</span>] - b[<span class="hljs-number">0</span>] })
   exonsRangesSorted.forEach(checkNonCanonicalIntron)
   <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">checkNonCanonicalIntron</span><span class="hljs-params">(exonRange, i)</span> {</span>
@@ -276,10 +276,12 @@ _transcribeBasesMatrix[<span class="hljs-string">'t'</span>] = <span class="hljs
     <span class="hljs-keyword">var</span> intronRange = [donor[<span class="hljs-number">1</span>], acceptor[<span class="hljs-number">0</span>]]
     <span class="hljs-keyword">var</span> intronStartBases = sequence.slice(intronRange[<span class="hljs-number">0</span>], intronRange[<span class="hljs-number">0</span>] + <span class="hljs-number">2</span>).toLowerCase().replace(<span class="hljs-string">'t'</span>, <span class="hljs-string">'u'</span>)
     <span class="hljs-keyword">var</span> intronStopBases = sequence.slice(intronRange[<span class="hljs-number">1</span>] - <span class="hljs-number">2</span>, intronRange[<span class="hljs-number">1</span>]).toLowerCase()
-    <span class="hljs-keyword">if</span> (intronStartBases !== <span class="hljs-string">'gu'</span> || intronStopBases !== <span class="hljs-string">'ag'</span>)
-      nonCanonicalIntronsRanges.push(intronRange)
+    <span class="hljs-keyword">if</span> (intronStartBases !== <span class="hljs-string">'gu'</span>)
+      nonCanonicalSplices.push(intronRange[<span class="hljs-number">0</span>])
+    <span class="hljs-keyword">if</span> (intronStopBases !== <span class="hljs-string">'ag'</span>)
+      nonCanonicalSplices.push(intronRange[<span class="hljs-number">1</span>])
   }
-  <span class="hljs-keyword">return</span> nonCanonicalIntronsRanges
+  <span class="hljs-keyword">return</span> nonCanonicalSplices
 }</pre></div></div>
             
         </li>

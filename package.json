@@ -1,7 +1,7 @@
 {
   "name": "bionode",
   "description": "A Node.js JavaScript library for client and server side bioinformatics",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "homepage": "http://bionode.io",
   "repository": "git://github.com/bionode/bionode.git",
   "author": {
@@ -19,7 +19,7 @@
     "gulp-util": "~2.2.12",
     "gulp-livereload": "~0.2.0",
     "tiny-lr": "0.0.5",
-    "webpack": "~1.0.0-beta7",
+    "webpack": "~1.0.0-beta8",
     "docco": "~0.6.2"
   },
   "keywords": [

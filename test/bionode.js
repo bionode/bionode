@@ -82,7 +82,7 @@ describe("reverse exons", function() {
 
 describe("find non canonical splices", function() {
   it("should return array with splices ranges using reference and exons ranges", function(done) {
-    bionode.findNonCanonicalSplices(data.dnaSequence, data.exonsRanges).should.eql([ [ 19272, 23047 ] ])
+    bionode.findNonCanonicalSplices(data.dnaSequence, data.exonsRanges).should.eql([19272])
     done()
   })
 })

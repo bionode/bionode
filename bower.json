@@ -1,7 +1,7 @@
 {
   "name": "bionode",
   "description": "A Node.js JavaScript library for client and server side bioinformatics.",
-  "version": "0.0.4",
+  "version": "0.1.0",
   "homepage": "bionode.io",
   "repository": { "type": "git", "url": "git://github.com/bionode/bionode.git" },
   "authors": [ "Bruno Vieira <mail@bmpvieira.com> (http://bmpvieira.com)" ],

@@ -1,3 +1,4 @@
+![bionode logo](https://raw.github.com/bionode/bionode/master/docs/bionode-logo.min.svg "bionode")
 # bionode [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url] [![Dependency Status](https://david-dm.org/bionode/bionode.png?theme=shields.io)](https://david-dm.org/bionode/bionode)
 
 > A Node.js JavaScript library for client and server side bioinformatics.
