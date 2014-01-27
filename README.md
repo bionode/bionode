@@ -1,4 +1,10 @@
-![bionode logo](https://raw.github.com/bionode/bionode/master/docs/bionode-logo.min.svg "bionode")
+<p align="center">
+  <a href="http://bionode.io">
+    <img height="200" width="200" title="bionode" alt="bionode logo" src="https://rawgithub.com/bionode/bionode/master/docs/bionode-logo.min.svg"/>
+  </a>
+  <br/>
+  <a href="http://bionode.io/">bionode.io</a>
+</p>
 # bionode [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url] [![Dependency Status](https://david-dm.org/bionode/bionode.png?theme=shields.io)](https://david-dm.org/bionode/bionode)
 
 > A Node.js JavaScript library for client and server side bioinformatics.
@@ -63,6 +69,28 @@ To rebuild the documentation using the comments in the code:
 ```sh
 $ npm run build-docs
 ```
+
+One way you can contribute to this project could be by checking other similar
+projects like [biopython](http://biopython.org), [bioruby](http://bioruby.open-bio.org),
+[biohaskell](http://biohaskell.org), [bioperl](http://www.bioperl.org), etc, and reimplementing some
+of their methods in JavaScript.
+
+Currently, this project seeks methods to manipulate
+biological data and not to visually represent it, unlike [BioJS](http://www.ebi.ac.uk/Tools/biojs/registry/index.html)
+which is a project of "Reusable components for presenting Biological data".
+
+Purpose
+-------
+Having bioinformatic methods available in JavaScript is useful for many reasons, one of them is for integration with genome viewers in the browser.
+
+We intend to use this module in the [afra](https://github.com/yeban/afra) project.
+
+Contacts
+--------
+Bruno Vieira <[mail@bmpvieira.com](mailto:mail@bmpvieira.com)> [@bmpvieira](https://twitter.com/bmpvieira)
+
+Yannick Wurm ([yannick.poulet.org](http://yannick.poulet.org)) [@yannick__](https://twitter.com/yannick__)
+
 
 License
 -------
