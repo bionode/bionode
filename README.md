@@ -5,14 +5,17 @@
   <br/>
   <a href="http://bionode.io/">bionode.io</a>
 </p>
-# bionode [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url] [![Dependency Status](https://david-dm.org/bionode/bionode.png?theme=shields.io)](https://david-dm.org/bionode/bionode)
+# bionode [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url] [![Dependency Status](https://david-dm.org/bionode/bionode.png?theme=shields.io)](//david-dm.org/bionode/bionode)
 
 > A Node.js JavaScript library for client and server side bioinformatics.
+
+We are now a [Google Summer of Code 2014 idea](http://www.open-bio.org/wiki/Google_Summer_of_Code_2014_Ideas#bionode_-_A_Node.js_JavaScript_library_for_client_and_server_side_bioinformatics) under the organization of the [Open Bioinformatics Foundation](http://open-bio.org).  
+[Submit your project](http://www.open-bio.org/wiki/Google_Summer_of_Code#Guide_for_prospective_GSoC_students) if you're interested in JavaScript/Node.js and Bioinformatics!
 
 Install
 -------
 
-Install bionode with [npm](https://npmjs.org/):
+Install bionode with [npm](//npmjs.org):
 
 ```sh
 $ npm install bionode
@@ -38,7 +41,7 @@ var bionode = require('bionode')
 
 In-browser, `bionode` is available as a global variable.
 
-Please read the [documentation](https://rawgithub.com/bionode/bionode/master/docs/bionode.html) for the methods exposed by bionode.
+Please read the [documentation](//rawgithub.com/bionode/bionode/master/docs/bionode.html) for the methods exposed by bionode.
 
 
 Contributing
@@ -71,8 +74,8 @@ $ npm run build-docs
 ```
 
 One way you can contribute to this project could be by checking other similar
-projects like [biopython](http://biopython.org), [bioruby](http://bioruby.open-bio.org),
-[biohaskell](http://biohaskell.org), [bioperl](http://www.bioperl.org), etc, and reimplementing some
+projects like [biopython](http://www.biopython.org), [bioruby](http://bioruby.open-bio.org),
+[biohaskell](//biohaskell.org), [bioperl](http://www.bioperl.org), etc, and reimplementing some
 of their methods in JavaScript.
 
 Currently, this project seeks methods to manipulate
@@ -83,13 +86,13 @@ Purpose
 -------
 Having bioinformatic methods available in JavaScript is useful for many reasons, one of them is for integration with genome viewers in the browser.
 
-We intend to use this module in the [afra](https://github.com/yeban/afra) project.
+We intend to use this module in the [afra](//github.com/yeban/afra) project.
 
 Contacts
 --------
-Bruno Vieira <[mail@bmpvieira.com](mailto:mail@bmpvieira.com)> [@bmpvieira](https://twitter.com/bmpvieira)
+Bruno Vieira <[mail@bmpvieira.com](mailto:mail@bmpvieira.com)> [@bmpvieira](//twitter.com/bmpvieira)
 
-Yannick Wurm ([yannick.poulet.org](http://yannick.poulet.org)) [@yannick__](https://twitter.com/yannick__)
+Yannick Wurm ([yannick.poulet.org](http://yannick.poulet.org)) [@yannick__](//twitter.com/yannick__)
 
 
 License
@@ -97,11 +100,11 @@ License
 
 bionode is licensed under the [MIT](https://raw.github.com/bionode/bionode/master/LICENSE) license.
 
-[npm-url]: https://npmjs.org/package/bionode
+[npm-url]: //npmjs.org/package/bionode
 [npm-image]: https://badge.fury.io/js/bionode.png
-[travis-url]: https://travis-ci.org/bionode/bionode
+[travis-url]: //travis-ci.org/bionode/bionode
 [travis-image]: https://travis-ci.org/bionode/bionode.png?branch=master
-[coveralls-url]: https://coveralls.io/r/bionode/bionode
+[coveralls-url]: //coveralls.io/r/bionode/bionode
 [coveralls-image]: https://coveralls.io/repos/bionode/bionode/badge.png
-[depstat-url]: https://david-dm.org/bionode/bionode
+[depstat-url]: //david-dm.org/bionode/bionode
 [depstat-image]: https://david-dm.org/bionode/bionode.png
