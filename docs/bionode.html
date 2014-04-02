@@ -100,7 +100,7 @@ _transcribeBasesMatrix[<span class="hljs-string">'t'</span>] = <span class="hljs
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-4">&#182;</a>
               </div>
-              <p>Takes a sequence and quickly checks if it&#39;s dna or rna. Doesn&#39;t check for mixing errors.</p>
+              <p>Takes a sequence and quickly checks if it’s dna or rna. Doesn’t check for mixing errors.</p>
 
             </div>
             
@@ -162,7 +162,7 @@ _transcribeBasesMatrix[<span class="hljs-string">'t'</span>] = <span class="hljs
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-7">&#182;</a>
               </div>
-              <p>Takes a sequence string and optional boolean for reverse, and returns it&#39;s complement.</p>
+              <p>Takes a sequence string and optional boolean for reverse, and returns it’s complement.</p>
 
             </div>
             
@@ -221,11 +221,20 @@ _transcribeBasesMatrix[<span class="hljs-string">'t'</span>] = <span class="hljs
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-10">&#182;</a>
               </div>
-              <p>Takes a sequence string and returns the transcribed sequence (dna &lt;-&gt; rna).</p>
+              <p>Takes a sequence string and returns the transcribed sequence (dna &lt;-&gt; rna).
+If an array of exons is given, they will be removed from the sequence.</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>Bionode.prototype.transcribe = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(sequence)</span> {</span>
+            <div class="content"><div class='highlight'><pre>Bionode.prototype.transcribe = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(sequence, exonsRanges)</span> {</span>
+  <span class="hljs-keyword">if</span> (exonsRanges) {
+    <span class="hljs-keyword">var</span> sequenceWithoutExons = <span class="hljs-string">''</span>
+    <span class="hljs-keyword">var</span> exonsRangesSorted = exonsRanges.sort(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(a, b)</span> {</span> <span class="hljs-keyword">return</span> a[<span class="hljs-number">0</span>] - b[<span class="hljs-number">0</span>] })
+    exonsRangesSorted.forEach(<span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(exonRange)</span> {</span>
+      sequenceWithoutExons += sequence.substring(exonRange[<span class="hljs-number">0</span>], exonRange[<span class="hljs-number">1</span>])
+    })
+    sequence = sequenceWithoutExons
+  }
   <span class="hljs-keyword">return</span> sequence.split(<span class="hljs-string">''</span>).map(<span class="hljs-keyword">this</span>.getTranscribeBase).join(<span class="hljs-string">''</span>)
 }</pre></div></div>
             
@@ -282,6 +291,23 @@ _transcribeBasesMatrix[<span class="hljs-string">'t'</span>] = <span class="hljs
       nonCanonicalSplices.push(intronRange[<span class="hljs-number">1</span>])
   }
   <span class="hljs-keyword">return</span> nonCanonicalSplices
+}</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-13">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-13">&#182;</a>
+              </div>
+              <p>Takes a sequence and returns boolean for canonical translation start site.</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>Bionode.prototype.checkCanonicalTranslationStartSite = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(sequence)</span> {</span>
+  <span class="hljs-keyword">return</span> sequence.substring(<span class="hljs-number">0</span>, <span class="hljs-number">3</span>).toLowerCase().replace(<span class="hljs-string">'t'</span>, <span class="hljs-string">'u'</span>) === <span class="hljs-string">'aug'</span>
 }</pre></div></div>
             
         </li>

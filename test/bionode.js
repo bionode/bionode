@@ -93,3 +93,11 @@ describe("find non canonical splices", function() {
     done()
   })
 })
+
+describe("check canonical translation start site", function() {
+  it("should return true if provided sequence starts with ATG/AUG", function(done) {
+    bionode.checkCanonicalTranslationStartSite(data.simDNASequenceCanonicalTranslation).should.be.true
+    bionode.checkCanonicalTranslationStartSite(data.simDNASequenceNonCanonicalTranslation).should.be.false
+    done()
+  })
+})
