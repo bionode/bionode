@@ -9,9 +9,6 @@
 
 > A Node.js JavaScript library for client and server side bioinformatics.
 
-We are now a [Google Summer of Code 2014 idea](http://www.open-bio.org/wiki/Google_Summer_of_Code_2014_Ideas#bionode_-_A_Node.js_JavaScript_library_for_client_and_server_side_bioinformatics) under the organization of the [Open Bioinformatics Foundation](http://open-bio.org).  
-[Submit your project](http://www.open-bio.org/wiki/Google_Summer_of_Code#Guide_for_prospective_GSoC_students) if you're interested in JavaScript/Node.js and Bioinformatics!
-
 Install
 -------
 
