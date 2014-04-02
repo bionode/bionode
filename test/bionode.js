@@ -63,6 +63,13 @@ describe("transcribe", function() {
   })
 })
 
+describe("transcribe with exons", function() {
+  it("should return rna string from dna string and remove exons provided", function(done) {
+    bionode.transcribe(data.simDNASequence, data.simExonsRanges).should.equal(data.simRNASequence)
+    done()
+  })
+})
+
 describe("reverse exons", function() {
   it("should return right exons coordinates reversed using array of exons and reference length", function(done) {
     var exonsRangesReversed = bionode.reverseExons(data.exonsRanges, data.length)
@@ -81,7 +88,7 @@ describe("reverse exons", function() {
 })
 
 describe("find non canonical splices", function() {
-  it("should return array with splices ranges using reference and exons ranges", function(done) {
+  it("should return array with splices sites using reference and exons ranges", function(done) {
     bionode.findNonCanonicalSplices(data.dnaSequence, data.exonsRanges).should.eql([19272])
     done()
   })
