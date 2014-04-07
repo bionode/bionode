@@ -105,8 +105,8 @@ describe("check canonical translation start site", function() {
 
 describe("find longest open reading frame", function() {
   it("should return the dna or rna string of the longest reading frame", function(done) {
-    bionode.findLongestOpenReadingFrame(data.simDNASequence).should.equal(data.simDNALongestReadingFrame)
-    bionode.findLongestOpenReadingFrame(data.simRNASequence).should.equal(data.simRNALongestReadingFrame)
+    bionode.findLongestOpenReadingFrame(data.simDNASequence).should.eql([data.simDNALongestReadingFrame, '+3'])
+    bionode.findLongestOpenReadingFrame(data.simRNASequence).should.eql([data.simRNALongestReadingFrame, '+3'])
     done()
   })
 })
