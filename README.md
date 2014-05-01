@@ -105,3 +105,7 @@ bionode is licensed under the [MIT](https://raw.github.com/bionode/bionode/maste
 [coveralls-image]: https://coveralls.io/repos/bionode/bionode/badge.png
 [depstat-url]: //david-dm.org/bionode/bionode
 [depstat-image]: https://david-dm.org/bionode/bionode.png
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/bionode/bionode/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
