@@ -397,9 +397,9 @@ bionode.getTranslatedAA(<span class="hljs-string">"CUU"</span>);
                 <a class="pilcrow" href="#section-19">&#182;</a>
               </div>
               <p>Take a sequence and an array of exonsRanges and removes them.</p>
-<pre><code>bionode.removeIntrons(<span class="hljs-string">"ATGACCCTGAAGGTGAATGACAG"</span>, [[<span class="hljs-number">1</span>,<span class="hljs-number">8</span>]]);
+<pre><code>bionode.removeIntrons(<span class="hljs-string">"ATGACCCTGAAGGTGAATGACAG"</span>, [[<span class="hljs-number">1</span>, <span class="hljs-number">8</span>]]);
 =&gt; <span class="hljs-string">"TGACCCT"</span>
-bionode.removeIntrons(<span class="hljs-string">"ATGACCCTGAAGGTGAATGACAG"</span>, [[<span class="hljs-number">2</span>,<span class="hljs-number">9</span>],[<span class="hljs-number">12</span>,<span class="hljs-number">20</span>]]);
+bionode.removeIntrons(<span class="hljs-string">"ATGACCCTGAAGGTGAATGACAG"</span>, [[<span class="hljs-number">2</span>, <span class="hljs-number">9</span>], [<span class="hljs-number">12</span>, <span class="hljs-number">20</span>]]);
 =&gt; <span class="hljs-string">"GACCCTGGTGAATGA"</span>
 </code></pre>
             </div>
@@ -486,7 +486,7 @@ If an array of exons is given, the introns will be removed from the sequence.</p
 =&gt; <span class="hljs-string">"MTLKVNDRKPN"</span>
 bionode.translate(<span class="hljs-string">"AUGACCCUGAAGGUGAAUGACAGGAAGCCCAAC"</span>); <span class="hljs-comment">//rna</span>
 =&gt; <span class="hljs-string">"MTLKVNDRKPN"</span>
-bionode.translate(<span class="hljs-string">"ATGACCCTGAAGGTGAATGACAGGAAGCC"</span>, [[<span class="hljs-number">3</span>,<span class="hljs-number">21</span>]]);
+bionode.translate(<span class="hljs-string">"ATGACCCTGAAGGTGAATGACAGGAAGCC"</span>, [[<span class="hljs-number">3</span>, <span class="hljs-number">21</span>]]);
 =&gt; <span class="hljs-string">"LKVND"</span>
 </code></pre>
             </div>
@@ -530,9 +530,9 @@ bionode.translate(<span class="hljs-string">"ATGACCCTGAAGGTGAATGACAGGAAGCC"</spa
                 <a class="pilcrow" href="#section-25">&#182;</a>
               </div>
               <p>Takes an array of exons and the length of the reference and returns inverted coordinates.</p>
-<pre><code>bionode.reverseExons([[<span class="hljs-number">2</span>,<span class="hljs-number">8</span>]],<span class="hljs-number">20</span>);
+<pre><code>bionode.reverseExons([[<span class="hljs-number">2</span>,<span class="hljs-number">8</span>]], <span class="hljs-number">20</span>);
 =&gt; [ [ <span class="hljs-number">12</span>, <span class="hljs-number">18</span> ] ]
-bionode.reverseExons([[<span class="hljs-number">10</span>,<span class="hljs-number">45</span>],[<span class="hljs-number">65</span>,<span class="hljs-number">105</span>]],<span class="hljs-number">180</span>);
+bionode.reverseExons([[<span class="hljs-number">10</span>,<span class="hljs-number">45</span>], [<span class="hljs-number">65</span>,<span class="hljs-number">105</span>]], <span class="hljs-number">180</span>);
 =&gt; [ [ <span class="hljs-number">135</span>, <span class="hljs-number">170</span> ], [ <span class="hljs-number">75</span>, <span class="hljs-number">115</span> ] ]
 </code></pre>
             </div>
@@ -570,7 +570,11 @@ bionode.reverseExons([[<span class="hljs-number">10</span>,<span class="hljs-num
                 <a class="pilcrow" href="#section-27">&#182;</a>
               </div>
               <p>Takes a sequence and exons ranges and returns an array of non canonical splice sites.</p>
-
+<pre><code>bionode.findNonCanonicalSplices(<span class="hljs-string">"GGCGGCGGCGGTGAGGTGGACCTGCGCGAATACGTGGTCGCCCTGT"</span>, [[<span class="hljs-number">0</span>, <span class="hljs-number">10</span>], [<span class="hljs-number">20</span>, <span class="hljs-number">30</span>]]);
+=&gt; [ <span class="hljs-number">20</span> ]
+bionode.findNonCanonicalSplices(<span class="hljs-string">"GGCGGCGGCGGTGAGGTGAGCCTGCGCGAATACGTGGTCGCCCTGT"</span>, [[<span class="hljs-number">0</span>, <span class="hljs-number">10</span>], [<span class="hljs-number">20</span>, <span class="hljs-number">30</span>]]);
+=&gt; []
+</code></pre>
             </div>
             
             <div class="content"><div class='highlight'><pre>Bionode.prototype.findNonCanonicalSplices = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(sequence, exonsRanges)</span> {</span>
