@@ -79,6 +79,9 @@ Currently, this project seeks methods to manipulate
 biological data and not to visually represent it, unlike [BioJS](http://www.ebi.ac.uk/Tools/biojs/registry/index.html)
 which is a project of "Reusable components for presenting Biological data".
 
+### Contributors
+Please see the file [contributors.md](contributors.md) for a list.
+
 Purpose
 -------
 Having bioinformatic methods available in JavaScript is useful for many reasons, one of them is for integration with genome viewers in the browser.
@@ -105,7 +108,4 @@ bionode is licensed under the [MIT](https://raw.github.com/bionode/bionode/maste
 [coveralls-image]: https://coveralls.io/repos/bionode/bionode/badge.png
 [depstat-url]: //david-dm.org/bionode/bionode
 [depstat-image]: https://david-dm.org/bionode/bionode.png
-
-
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/bionode/bionode/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
-

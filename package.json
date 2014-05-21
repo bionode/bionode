@@ -1,13 +1,17 @@
 {
   "name": "bionode",
   "description": "A Node.js JavaScript library for client and server side bioinformatics",
-  "version": "0.4.0",
+  "version": "0.4.1",
   "homepage": "http://bionode.io",
-  "repository": "git://github.com/bionode/bionode.git",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/bionode/bionode.git"
+  },
   "author": {
     "name": "Bruno Vieira",
     "email": "mail@bmpvieira.com"
   },
+  "license": "MIT",
   "dependencies": {},
   "devDependencies": {
     "mocha": "~1.17.0",
@@ -20,7 +24,8 @@
     "gulp-livereload": "~0.2.0",
     "tiny-lr": "0.0.5",
     "webpack": "~1.0.0-beta8",
-    "docco": "~0.6.2"
+    "docco": "~0.6.2",
+    "contributor": "^0.1.16"
   },
   "keywords": [
     "bioinformatics",
@@ -40,5 +45,20 @@
     "build-browser": "webpack",
     "build-docs": "docco ./lib/bionode.js"
   },
-  "license": "MIT"
+  "contributors": [
+    {
+      "name": "Alan Rice",
+      "email": "alanmrice@gmail.com",
+      "url": "https://github.com/alanrice",
+      "contributions": 2,
+      "hireable": false
+    },
+    {
+      "name": "Bruno Vieira",
+      "email": "mail@bmpvieira.com",
+      "url": "https://github.com/bmpvieira",
+      "contributions": 15,
+      "hireable": false
+    }
+  ]
 }
