@@ -43,6 +43,32 @@
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-2">&#182;</a>
               </div>
+              <h2 id="sequence-manipulation">Sequence manipulation</h2>
+<hr>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-3">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-3">&#182;</a>
+              </div>
+              
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-4">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-4">&#182;</a>
+              </div>
               <p>Create matrices for converting between genetic code bases.</p>
 
             </div>
@@ -94,11 +120,11 @@ _transcribeBasesMatrix[<span class="hljs-string">'t'</span>] = <span class="hljs
         </li>
         
         
-        <li id="section-3">
+        <li id="section-5">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-3">&#182;</a>
+                <a class="pilcrow" href="#section-5">&#182;</a>
               </div>
               <p>Helper function to mirror bases for translation (e.g. A&lt;-&gt;T) and also add lowerCases.</p>
 
@@ -118,14 +144,32 @@ _transcribeBasesMatrix[<span class="hljs-string">'t'</span>] = <span class="hljs
         </li>
         
         
-        <li id="section-4">
+        <li id="section-6">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-4">&#182;</a>
+                <a class="pilcrow" href="#section-6">&#182;</a>
               </div>
-              <p>Takes a sequence and quickly checks if it’s dna or rna. Doesn’t check for mixing errors.</p>
+              <h3 id="check-sequence-type">Check sequence type</h3>
 
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-7">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-7">&#182;</a>
+              </div>
+              <p>Takes a sequence and quickly checks if it’s dna or rna.
+<strong>Doesn’t check for mixing errors.</strong></p>
+<pre><code>bionode.checkSequenceType(<span class="hljs-string">"ATGACCCTGAGAAGAGCACCG"</span>);
+=&gt; <span class="hljs-string">"dna"</span>
+bionode.checkSequenceType(<span class="hljs-string">"AUGACCCUGAAGGUGAAUGAA"</span>);
+=&gt; <span class="hljs-string">"rna"</span>
+</code></pre>
             </div>
             
             <div class="content"><div class='highlight'><pre>Bionode.prototype.checkSequenceType = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(sequence)</span> {</span>
@@ -143,11 +187,11 @@ _transcribeBasesMatrix[<span class="hljs-string">'t'</span>] = <span class="hljs
         </li>
         
         
-        <li id="section-5">
+        <li id="section-8">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-5">&#182;</a>
+                <a class="pilcrow" href="#section-8">&#182;</a>
               </div>
               <p>Takes a sequence type argument and returns a function to complement bases.</p>
 
@@ -165,14 +209,29 @@ _transcribeBasesMatrix[<span class="hljs-string">'t'</span>] = <span class="hljs
         </li>
         
         
-        <li id="section-6">
+        <li id="section-9">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-6">&#182;</a>
+                <a class="pilcrow" href="#section-9">&#182;</a>
+              </div>
+              <h3 id="reverse-sequence">Reverse sequence</h3>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-10">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-10">&#182;</a>
               </div>
               <p>Takes sequence string and returns the reverse sequence.</p>
-
+<pre><code>bionode.reverse(<span class="hljs-string">"ATGACCCTGAAGGTGAA"</span>);
+=&gt; <span class="hljs-string">"AAGTGGAAGTCCCAGTA"</span>
+</code></pre>
             </div>
             
             <div class="content"><div class='highlight'><pre>Bionode.prototype.reverse = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(sequence)</span> {</span>
@@ -182,14 +241,34 @@ _transcribeBasesMatrix[<span class="hljs-string">'t'</span>] = <span class="hljs
         </li>
         
         
-        <li id="section-7">
+        <li id="section-11">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-7">&#182;</a>
+                <a class="pilcrow" href="#section-11">&#182;</a>
               </div>
-              <p>Takes a sequence string and optional boolean for reverse, and returns it’s complement.</p>
+              <h3 id="-reverse-complement-sequence">(Reverse) complement sequence</h3>
 
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-12">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-12">&#182;</a>
+              </div>
+              <p>Takes a sequence string and optional boolean for reverse, and returns its complement.</p>
+<pre><code>bionode.complement(<span class="hljs-string">"ATGACCCTGAAGGTGAA"</span>);
+=&gt; <span class="hljs-string">"TACTGGGACTTCCACTT"</span>
+bionode.complement(<span class="hljs-string">"ATGACCCTGAAGGTGAA"</span>, <span class="hljs-literal">true</span>);
+=&gt; <span class="hljs-string">"TTCACCTTCAGGGTCAT"</span>
+<span class="hljs-comment">//Alias</span>
+bionode.reverseComplement(<span class="hljs-string">"ATGACCCTGAAGGTGAA"</span>);
+=&gt; <span class="hljs-string">"TTCACCTTCAGGGTCAT"</span>
+</code></pre>
             </div>
             
             <div class="content"><div class='highlight'><pre>Bionode.prototype.complement = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(sequence, reverse)</span> {</span>
@@ -207,11 +286,11 @@ _transcribeBasesMatrix[<span class="hljs-string">'t'</span>] = <span class="hljs
         </li>
         
         
-        <li id="section-8">
+        <li id="section-13">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-8">&#182;</a>
+                <a class="pilcrow" href="#section-13">&#182;</a>
               </div>
               <p>Takes a sequence string and returns the reverse complement (syntax sugar).</p>
 
@@ -224,14 +303,35 @@ _transcribeBasesMatrix[<span class="hljs-string">'t'</span>] = <span class="hljs
         </li>
         
         
-        <li id="section-9">
+        <li id="section-14">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-9">&#182;</a>
+                <a class="pilcrow" href="#section-14">&#182;</a>
+              </div>
+              <h3 id="transcribe-base">Transcribe base</h3>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-15">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-15">&#182;</a>
               </div>
               <p>Takes a base character and returns the transcript base.</p>
-
+<pre><code>bionode.getTranscribedBase(<span class="hljs-string">"A"</span>);
+=&gt; <span class="hljs-string">"U"</span>
+bionode.getTranscribedBase(<span class="hljs-string">"T"</span>);
+=&gt; <span class="hljs-string">"A"</span>
+bionode.getTranscribedBase(<span class="hljs-string">"t"</span>);
+=&gt; <span class="hljs-string">"a"</span>
+bionode.getTranscribedBase(<span class="hljs-string">"C"</span>);
+=&gt; <span class="hljs-string">"G"</span>
+</code></pre>
             </div>
             
             <div class="content"><div class='highlight'><pre>Bionode.prototype.getTranscribedBase = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(base)</span> {</span>
@@ -241,14 +341,33 @@ _transcribeBasesMatrix[<span class="hljs-string">'t'</span>] = <span class="hljs
         </li>
         
         
-        <li id="section-10">
+        <li id="section-16">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-10">&#182;</a>
+                <a class="pilcrow" href="#section-16">&#182;</a>
+              </div>
+              <h3 id="get-codon-amino-acid">Get codon amino acid</h3>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-17">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-17">&#182;</a>
               </div>
               <p>Takes an RNA codon and returns the translated amino acid.</p>
-
+<pre><code>bionode.getTranslatedAA(<span class="hljs-string">"AUG"</span>);
+=&gt; <span class="hljs-string">"M"</span>
+bionode.getTranslatedAA(<span class="hljs-string">"GCU"</span>);
+=&gt; <span class="hljs-string">"A"</span>
+bionode.getTranslatedAA(<span class="hljs-string">"CUU"</span>);
+=&gt; <span class="hljs-string">"L"</span>
+</code></pre>
             </div>
             
             <div class="content"><div class='highlight'><pre>Bionode.prototype.getTranslatedAA = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(codon)</span> {</span>
@@ -258,14 +377,31 @@ _transcribeBasesMatrix[<span class="hljs-string">'t'</span>] = <span class="hljs
         </li>
         
         
-        <li id="section-11">
+        <li id="section-18">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-11">&#182;</a>
+                <a class="pilcrow" href="#section-18">&#182;</a>
+              </div>
+              <h3 id="remove-introns">Remove introns</h3>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-19">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-19">&#182;</a>
               </div>
               <p>Take a sequence and an array of exonsRanges and removes them.</p>
-
+<pre><code>bionode.removeIntrons(<span class="hljs-string">"ATGACCCTGAAGGTGAATGACAG"</span>, [[<span class="hljs-number">1</span>, <span class="hljs-number">8</span>]]);
+=&gt; <span class="hljs-string">"TGACCCT"</span>
+bionode.removeIntrons(<span class="hljs-string">"ATGACCCTGAAGGTGAATGACAG"</span>, [[<span class="hljs-number">2</span>, <span class="hljs-number">9</span>], [<span class="hljs-number">12</span>, <span class="hljs-number">20</span>]]);
+=&gt; <span class="hljs-string">"GACCCTGGTGAATGA"</span>
+</code></pre>
             </div>
             
             <div class="content"><div class='highlight'><pre>Bionode.prototype.removeIntrons = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(sequence, exonsRanges)</span> {</span>
@@ -280,15 +416,32 @@ _transcribeBasesMatrix[<span class="hljs-string">'t'</span>] = <span class="hljs
         </li>
         
         
-        <li id="section-12">
+        <li id="section-20">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-12">&#182;</a>
+                <a class="pilcrow" href="#section-20">&#182;</a>
+              </div>
+              <h3 id="transcribe-sequence">Transcribe sequence</h3>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-21">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-21">&#182;</a>
               </div>
               <p>Takes a sequence string and returns the transcribed sequence (dna &lt;-&gt; rna).
 If an array of exons is given, the introns will be removed from the sequence.</p>
-
+<pre><code>bionode.transcribe(<span class="hljs-string">"ATGACCCTGAAGGTGAA"</span>);
+=&gt; <span class="hljs-string">"AUGACCCUGAAGGUGAA"</span>
+bionode.transcribe(<span class="hljs-string">"AUGACCCUGAAGGUGAA"</span>); <span class="hljs-comment">//reverse</span>
+=&gt; <span class="hljs-string">"ATGACCCTGAAGGTGAA"</span>
+</code></pre>
             </div>
             
             <div class="content"><div class='highlight'><pre>Bionode.prototype.transcribe = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(sequence, exonsRanges)</span> {</span>
@@ -308,15 +461,34 @@ If an array of exons is given, the introns will be removed from the sequence.</p
         </li>
         
         
-        <li id="section-13">
+        <li id="section-22">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-13">&#182;</a>
+                <a class="pilcrow" href="#section-22">&#182;</a>
+              </div>
+              <h3 id="translate-sequence">Translate sequence</h3>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-23">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-23">&#182;</a>
               </div>
               <p>Takes a DNA or RNA sequence and translates it to protein
 If an array of exons is given, the introns will be removed from the sequence.</p>
-
+<pre><code>bionode.translate(<span class="hljs-string">"ATGACCCTGAAGGTGAATGACAGGAAGCCCAAC"</span>); <span class="hljs-comment">//dna</span>
+=&gt; <span class="hljs-string">"MTLKVNDRKPN"</span>
+bionode.translate(<span class="hljs-string">"AUGACCCUGAAGGUGAAUGACAGGAAGCCCAAC"</span>); <span class="hljs-comment">//rna</span>
+=&gt; <span class="hljs-string">"MTLKVNDRKPN"</span>
+bionode.translate(<span class="hljs-string">"ATGACCCTGAAGGTGAATGACAGGAAGCC"</span>, [[<span class="hljs-number">3</span>, <span class="hljs-number">21</span>]]);
+=&gt; <span class="hljs-string">"LKVND"</span>
+</code></pre>
             </div>
             
             <div class="content"><div class='highlight'><pre>Bionode.prototype.translate = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(sequence, exonsRanges)</span> {</span>
@@ -338,14 +510,31 @@ If an array of exons is given, the introns will be removed from the sequence.</p
         </li>
         
         
-        <li id="section-14">
+        <li id="section-24">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-14">&#182;</a>
+                <a class="pilcrow" href="#section-24">&#182;</a>
+              </div>
+              <h3 id="reverse-exons">Reverse exons</h3>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-25">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-25">&#182;</a>
               </div>
               <p>Takes an array of exons and the length of the reference and returns inverted coordinates.</p>
-
+<pre><code>bionode.reverseExons([[<span class="hljs-number">2</span>,<span class="hljs-number">8</span>]], <span class="hljs-number">20</span>);
+=&gt; [ [ <span class="hljs-number">12</span>, <span class="hljs-number">18</span> ] ]
+bionode.reverseExons([[<span class="hljs-number">10</span>,<span class="hljs-number">45</span>], [<span class="hljs-number">65</span>,<span class="hljs-number">105</span>]], <span class="hljs-number">180</span>);
+=&gt; [ [ <span class="hljs-number">135</span>, <span class="hljs-number">170</span> ], [ <span class="hljs-number">75</span>, <span class="hljs-number">115</span> ] ]
+</code></pre>
             </div>
             
             <div class="content"><div class='highlight'><pre>Bionode.prototype.reverseExons = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(exonsRanges, referenceLength)</span> {</span>
@@ -361,14 +550,31 @@ If an array of exons is given, the introns will be removed from the sequence.</p
         </li>
         
         
-        <li id="section-15">
+        <li id="section-26">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-15">&#182;</a>
+                <a class="pilcrow" href="#section-26">&#182;</a>
+              </div>
+              <h3 id="find-non-canonical-splice-sites">Find non-canonical splice sites</h3>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-27">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-27">&#182;</a>
               </div>
               <p>Takes a sequence and exons ranges and returns an array of non canonical splice sites.</p>
-
+<pre><code>bionode.findNonCanonicalSplices(<span class="hljs-string">"GGCGGCGGCGGTGAGGTGGACCTGCGCGAATACGTGGTCGCCCTGT"</span>, [[<span class="hljs-number">0</span>, <span class="hljs-number">10</span>], [<span class="hljs-number">20</span>, <span class="hljs-number">30</span>]]);
+=&gt; [ <span class="hljs-number">20</span> ]
+bionode.findNonCanonicalSplices(<span class="hljs-string">"GGCGGCGGCGGTGAGGTGAGCCTGCGCGAATACGTGGTCGCCCTGT"</span>, [[<span class="hljs-number">0</span>, <span class="hljs-number">10</span>], [<span class="hljs-number">20</span>, <span class="hljs-number">30</span>]]);
+=&gt; []
+</code></pre>
             </div>
             
             <div class="content"><div class='highlight'><pre>Bionode.prototype.findNonCanonicalSplices = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(sequence, exonsRanges)</span> {</span>
@@ -393,14 +599,31 @@ If an array of exons is given, the introns will be removed from the sequence.</p
         </li>
         
         
-        <li id="section-16">
+        <li id="section-28">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-16">&#182;</a>
+                <a class="pilcrow" href="#section-28">&#182;</a>
+              </div>
+              <h3 id="check-canonical-translation-start-site">Check canonical translation start site</h3>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-29">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-29">&#182;</a>
               </div>
               <p>Takes a sequence and returns boolean for canonical translation start site.</p>
-
+<pre><code>bionode.checkCanonicalTranslationStartSite(<span class="hljs-string">"ATGACCCTGAAGGT"</span>);
+=&gt; <span class="hljs-literal">true</span>
+bionode.checkCanonicalTranslationStartSite(<span class="hljs-string">"AATGACCCTGAAGGT"</span>);
+=&gt; <span class="hljs-literal">false</span>
+</code></pre>
             </div>
             
             <div class="content"><div class='highlight'><pre>Bionode.prototype.checkCanonicalTranslationStartSite = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(sequence)</span> {</span>
@@ -410,14 +633,34 @@ If an array of exons is given, the introns will be removed from the sequence.</p
         </li>
         
         
-        <li id="section-17">
+        <li id="section-30">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-17">&#182;</a>
+                <a class="pilcrow" href="#section-30">&#182;</a>
+              </div>
+              <h3 id="get-reading-frames">Get reading frames</h3>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-31">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-31">&#182;</a>
               </div>
               <p>Takes a sequence and returns an array with the six possible Reading Frames (+1, +2, +3, -1, -2, -3).</p>
-
+<pre><code>bionode.getReadingFrames(<span class="hljs-string">"ATGACCCTGAAGGTGAATGACAGGAAGCCCAAC"</span>);
+=&gt; [ <span class="hljs-string">'ATGACCCTGAAGGTGAATGACAGGAAGCCCAAC'</span>,
+     <span class="hljs-string">'TGACCCTGAAGGTGAATGACAGGAAGCCCAAC'</span>,
+     <span class="hljs-string">'GACCCTGAAGGTGAATGACAGGAAGCCCAAC'</span>,
+     <span class="hljs-string">'GTTGGGCTTCCTGTCATTCACCTTCAGGGTCAT'</span>,
+     <span class="hljs-string">'TTGGGCTTCCTGTCATTCACCTTCAGGGTCAT'</span>,
+     <span class="hljs-string">'TGGGCTTCCTGTCATTCACCTTCAGGGTCAT'</span> ]
+</code></pre>
             </div>
             
             <div class="content"><div class='highlight'><pre>Bionode.prototype.getReadingFrames = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(sequence)</span> {</span>
@@ -428,14 +671,33 @@ If an array of exons is given, the introns will be removed from the sequence.</p
         </li>
         
         
-        <li id="section-18">
+        <li id="section-32">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-18">&#182;</a>
+                <a class="pilcrow" href="#section-32">&#182;</a>
+              </div>
+              <h3 id="get-open-reading-frames">Get open reading frames</h3>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-33">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-33">&#182;</a>
               </div>
               <p>Takes a Reading Frame sequence and returns an array of Open Reading Frames.</p>
-
+<pre><code>bionode.getOpenReadingFrames(<span class="hljs-string">"ATGACCCTGAAGGTGAATGACAGGAAGCCCAAC"</span>);
+=&gt; [ <span class="hljs-string">'ATGACCCTGAAGGTGAATGACAGGAAGCCCAAC'</span> ]
+bionode.getOpenReadingFrames(<span class="hljs-string">"AUGACCCUGAAGGUGAAUGACAGGAAGCCCAAC"</span>);
+=&gt; [ <span class="hljs-string">'AUGACCCUGAAGGUGAAUGACAGGAAGCCCAAC'</span> ]
+bionode.getOpenReadingFrames(<span class="hljs-string">"ATGAGAAGCCCAACATGAGGACTGA"</span>);
+=&gt; [ <span class="hljs-string">'ATGAGAAGCCCAACATGA'</span>, <span class="hljs-string">'GGACTGA'</span> ]
+</code></pre>
             </div>
             
             <div class="content"><div class='highlight'><pre>Bionode.prototype.getOpenReadingFrames = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(sequence)</span> {</span>
@@ -463,14 +725,34 @@ If an array of exons is given, the introns will be removed from the sequence.</p
         </li>
         
         
-        <li id="section-19">
+        <li id="section-34">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-19">&#182;</a>
+                <a class="pilcrow" href="#section-34">&#182;</a>
+              </div>
+              <h3 id="get-all-open-reading-frames">Get all open reading frames</h3>
+
+            </div>
+            
+        </li>
+        
+        
+        <li id="section-35">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-35">&#182;</a>
               </div>
               <p>Takes a sequence and returns all Open Reading Frames in the six Reading Frames.</p>
-
+<pre><code>bionode.getAllOpenReadingFrames(<span class="hljs-string">"ATGACCCTGAAGGTGAATGACA"</span>);
+=&gt; [ [ <span class="hljs-string">'ATGACCCTGAAGGTGAATGACA'</span> ],
+     [ <span class="hljs-string">'TGA'</span>, <span class="hljs-string">'CCCTGA'</span>, <span class="hljs-string">'AGGTGA'</span>, <span class="hljs-string">'ATGACA'</span> ],
+     [ <span class="hljs-string">'GACCCTGAAGGTGAATGA'</span>, <span class="hljs-string">'CA'</span> ],
+     [ <span class="hljs-string">'TGTCATTCACCTTCAGGGTCAT'</span> ],
+     [ <span class="hljs-string">'GTCATTCACCTTCAGGGTCAT'</span> ],
+     [ <span class="hljs-string">'TCATTCACCTTCAGGGTCAT'</span> ] ]
+</code></pre>
             </div>
             
             <div class="content"><div class='highlight'><pre>Bionode.prototype.getAllOpenReadingFrames = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(sequence)</span> {</span>
@@ -482,37 +764,96 @@ If an array of exons is given, the introns will be removed from the sequence.</p
         </li>
         
         
-        <li id="section-20">
+        <li id="section-36">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-20">&#182;</a>
+                <a class="pilcrow" href="#section-36">&#182;</a>
               </div>
-              <p>Takes a sequence and returns the longest ORF
-If there’s a tie, choose the one that starts with Methionine
-If there’s still a tie, return one randomly</p>
+              <h3 id="find-longest-open-reading-frame">Find longest open reading frame</h3>
 
             </div>
-            
-            <div class="content"><div class='highlight'><pre>Bionode.prototype.findLongestOpenReadingFrame = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(sequence)</span> {</span>
-  <span class="hljs-keyword">var</span> longestOpenReadingFrame = bionode.getAllOpenReadingFrames(sequence)
-  .map(getLongest)
-  .sort(sortReadingFrame)[<span class="hljs-number">0</span>]</pre></div></div>
             
         </li>
         
         
-        <li id="section-21">
+        <li id="section-37">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-21">&#182;</a>
+                <a class="pilcrow" href="#section-37">&#182;</a>
+              </div>
+              <p>Takes a sequence and returns the longest ORF from all six reading frames and
+corresponding frame symbol (+1, +2, +3, -1, -2, -3). If a frame symbol is specified,
+only look for longest ORF on that frame.
+When sorting ORFs, if there’s a tie, choose the one that starts with start codon Methionine.
+If there’s still a tie, return one randomly.</p>
+<pre><code>bionode.findLongestOpenReadingFrame(<span class="hljs-string">"ATGACCCTGAAGGTGAATGACA"</span>);
+=&gt; [ <span class="hljs-string">'ATGACCCTGAAGGTGAATGACA'</span>, <span class="hljs-string">'+1'</span> ]
+bionode.findLongestOpenReadingFrame(<span class="hljs-string">"ATGACCCTGAAGGTGAATGACA"</span>, <span class="hljs-string">"-1"</span>);
+=&gt; <span class="hljs-string">"TGTCATTCACCTTCAGGGTCAT"</span>
+</code></pre>
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>Bionode.prototype.findLongestOpenReadingFrame = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(sequence, frameSymbol)</span> {</span>
+  <span class="hljs-keyword">var</span> frameSymbols = [<span class="hljs-string">'+1'</span>, <span class="hljs-string">'+2'</span>, <span class="hljs-string">'+3'</span>, <span class="hljs-string">'-1'</span>, <span class="hljs-string">'-2'</span>, <span class="hljs-string">'-3'</span>]
+  <span class="hljs-keyword">if</span> (frameSymbol) {
+    <span class="hljs-keyword">var</span> framePosition = frameSymbols.indexOf(frameSymbol)
+    <span class="hljs-keyword">var</span> readingFrame = bionode.getReadingFrames(sequence)[framePosition]
+    <span class="hljs-keyword">var</span> openReadingFrames = bionode.getOpenReadingFrames(readingFrame)
+    <span class="hljs-keyword">var</span> longestOpenReadingFrame = getLongestOpenReadingFrame(openReadingFrames)
+    <span class="hljs-keyword">return</span> longestOpenReadingFrame
+  }
+  <span class="hljs-keyword">else</span> {</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-38">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-38">&#182;</a>
+              </div>
+              <p>Get longest ORFs for all six possible reading frames</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">var</span> longestOpenReadingFrames = bionode.getAllOpenReadingFrames(sequence).map(getLongestOpenReadingFrame)</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-39">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-39">&#182;</a>
+              </div>
+              <p>Get longest ORF</p>
+
+            </div>
+            
+            <div class="content"><div class='highlight'><pre>    <span class="hljs-keyword">var</span> longestOpenReadingFrame = getLongestOpenReadingFrame(longestOpenReadingFrames.slice())
+    <span class="hljs-keyword">var</span> framePosition = longestOpenReadingFrames.indexOf(longestOpenReadingFrame)
+    <span class="hljs-keyword">var</span> frameSymbol = frameSymbols[framePosition]
+    <span class="hljs-keyword">return</span> [longestOpenReadingFrame, frameSymbol]
+  }</pre></div></div>
+            
+        </li>
+        
+        
+        <li id="section-40">
+            <div class="annotation">
+              
+              <div class="pilwrap ">
+                <a class="pilcrow" href="#section-40">&#182;</a>
               </div>
               <p>Helper that sorts by length, giving priority to ones that start with ATG/AUG</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sortReadingFrame</span><span class="hljs-params">(a, b)</span> {</span>
+            <div class="content"><div class='highlight'><pre>  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">sortReadingFrames</span><span class="hljs-params">(a, b)</span> {</span>
     <span class="hljs-keyword">var</span> aSort = a.length
     <span class="hljs-keyword">var</span> bSort = b.length
     <span class="hljs-keyword">if</span> (bSort - aSort === <span class="hljs-number">0</span>) {
@@ -527,21 +868,20 @@ If there’s still a tie, return one randomly</p>
         </li>
         
         
-        <li id="section-22">
+        <li id="section-41">
             <div class="annotation">
               
               <div class="pilwrap ">
-                <a class="pilcrow" href="#section-22">&#182;</a>
+                <a class="pilcrow" href="#section-41">&#182;</a>
               </div>
               <p>Helper that takes an array and returns longest Reading Frame</p>
 
             </div>
             
-            <div class="content"><div class='highlight'><pre>  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getLongest</span><span class="hljs-params">(array)</span> {</span>
-    <span class="hljs-keyword">return</span> array.sort(sortReadingFrame)[<span class="hljs-number">0</span>]
+            <div class="content"><div class='highlight'><pre>  <span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">getLongestOpenReadingFrame</span><span class="hljs-params">(array)</span> {</span>
+    <span class="hljs-keyword">return</span> array.sort(sortReadingFrames)[<span class="hljs-number">0</span>]
   }
 
-  <span class="hljs-keyword">return</span> longestOpenReadingFrame
 }</pre></div></div>
             
         </li>
