@@ -73,7 +73,7 @@
 
             </div>
             
-            <div class="content"><div class='highlight'><pre><span class="hljs-keyword">var</span> _baseMatrix = { A: <span class="hljs-string">'T'</span>, C: <span class="hljs-string">'G'</span> }
+            <div class="content"><div class='highlight'><pre><span class="hljs-keyword">var</span> _baseMatrix = { A: <span class="hljs-string">'T'</span>, C: <span class="hljs-string">'G'</span>, W: <span class="hljs-string">'S'</span>, M: <span class="hljs-string">'K'</span>, R: <span class="hljs-string">'Y'</span>, B: <span class="hljs-string">'V'</span>, D: <span class="hljs-string">'H'</span> }
 
 <span class="hljs-keyword">var</span> _dnaComplementBasesMatrix = <span class="hljs-built_in">Object</span>.create(_baseMatrix)
 <span class="hljs-keyword">var</span> _rnaComplementBasesMatrix = <span class="hljs-built_in">Object</span>.create(_baseMatrix)
@@ -89,18 +89,26 @@
   <span class="hljs-string">'CCA'</span>: <span class="hljs-string">'P'</span>, <span class="hljs-string">'CCG'</span>: <span class="hljs-string">'P'</span>, <span class="hljs-string">'UCU'</span>: <span class="hljs-string">'S'</span>, <span class="hljs-string">'UCC'</span>: <span class="hljs-string">'S'</span>, <span class="hljs-string">'UCA'</span>: <span class="hljs-string">'S'</span>, <span class="hljs-string">'UCG'</span>: <span class="hljs-string">'S'</span>,
   <span class="hljs-string">'AGU'</span>: <span class="hljs-string">'S'</span>, <span class="hljs-string">'AGC'</span>: <span class="hljs-string">'S'</span>, <span class="hljs-string">'ACU'</span>: <span class="hljs-string">'T'</span>, <span class="hljs-string">'ACC'</span>: <span class="hljs-string">'T'</span>, <span class="hljs-string">'ACA'</span>: <span class="hljs-string">'T'</span>, <span class="hljs-string">'ACG'</span>: <span class="hljs-string">'T'</span>,
   <span class="hljs-string">'UGG'</span>: <span class="hljs-string">'W'</span>, <span class="hljs-string">'UAU'</span>: <span class="hljs-string">'Y'</span>, <span class="hljs-string">'UAC'</span>: <span class="hljs-string">'Y'</span>, <span class="hljs-string">'GUU'</span>: <span class="hljs-string">'V'</span>, <span class="hljs-string">'GUC'</span>: <span class="hljs-string">'V'</span>, <span class="hljs-string">'GUA'</span>: <span class="hljs-string">'V'</span>,
-  <span class="hljs-string">'GUG'</span>: <span class="hljs-string">'V'</span>, <span class="hljs-string">'UAA'</span>: <span class="hljs-string">'*'</span>, <span class="hljs-string">'UGA'</span>: <span class="hljs-string">'*'</span>, <span class="hljs-string">'UAG'</span>: <span class="hljs-string">'*'</span>, <span class="hljs-string">'gcu'</span>: <span class="hljs-string">'a'</span>, <span class="hljs-string">'gcc'</span>: <span class="hljs-string">'a'</span>,
-  <span class="hljs-string">'gca'</span>: <span class="hljs-string">'a'</span>, <span class="hljs-string">'gcg'</span>: <span class="hljs-string">'a'</span>, <span class="hljs-string">'cgu'</span>: <span class="hljs-string">'r'</span>, <span class="hljs-string">'cgc'</span>: <span class="hljs-string">'r'</span>, <span class="hljs-string">'cga'</span>: <span class="hljs-string">'r'</span>, <span class="hljs-string">'cgg'</span>: <span class="hljs-string">'r'</span>,
-  <span class="hljs-string">'aga'</span>: <span class="hljs-string">'r'</span>, <span class="hljs-string">'agg'</span>: <span class="hljs-string">'r'</span>, <span class="hljs-string">'aau'</span>: <span class="hljs-string">'n'</span>, <span class="hljs-string">'aac'</span>: <span class="hljs-string">'n'</span>, <span class="hljs-string">'gau'</span>: <span class="hljs-string">'d'</span>, <span class="hljs-string">'gac'</span>: <span class="hljs-string">'d'</span>,
-  <span class="hljs-string">'ugu'</span>: <span class="hljs-string">'c'</span>, <span class="hljs-string">'ugc'</span>: <span class="hljs-string">'c'</span>, <span class="hljs-string">'caa'</span>: <span class="hljs-string">'q'</span>, <span class="hljs-string">'cag'</span>: <span class="hljs-string">'q'</span>, <span class="hljs-string">'gaa'</span>: <span class="hljs-string">'e'</span>, <span class="hljs-string">'gag'</span>: <span class="hljs-string">'e'</span>,
-  <span class="hljs-string">'ggu'</span>: <span class="hljs-string">'g'</span>, <span class="hljs-string">'ggc'</span>: <span class="hljs-string">'g'</span>, <span class="hljs-string">'gga'</span>: <span class="hljs-string">'g'</span>, <span class="hljs-string">'ggg'</span>: <span class="hljs-string">'g'</span>, <span class="hljs-string">'cau'</span>: <span class="hljs-string">'h'</span>, <span class="hljs-string">'cac'</span>: <span class="hljs-string">'h'</span>,
-  <span class="hljs-string">'auu'</span>: <span class="hljs-string">'i'</span>, <span class="hljs-string">'auc'</span>: <span class="hljs-string">'i'</span>, <span class="hljs-string">'aua'</span>: <span class="hljs-string">'i'</span>, <span class="hljs-string">'uua'</span>: <span class="hljs-string">'l'</span>, <span class="hljs-string">'uug'</span>: <span class="hljs-string">'l'</span>, <span class="hljs-string">'cuu'</span>: <span class="hljs-string">'l'</span>,
-  <span class="hljs-string">'cuc'</span>: <span class="hljs-string">'l'</span>, <span class="hljs-string">'cua'</span>: <span class="hljs-string">'l'</span>, <span class="hljs-string">'cug'</span>: <span class="hljs-string">'l'</span>, <span class="hljs-string">'aaa'</span>: <span class="hljs-string">'k'</span>, <span class="hljs-string">'aag'</span>: <span class="hljs-string">'k'</span>, <span class="hljs-string">'aug'</span>: <span class="hljs-string">'m'</span>,
-  <span class="hljs-string">'uuu'</span>: <span class="hljs-string">'f'</span>, <span class="hljs-string">'uuc'</span>: <span class="hljs-string">'f'</span>, <span class="hljs-string">'ccu'</span>: <span class="hljs-string">'p'</span>, <span class="hljs-string">'ccc'</span>: <span class="hljs-string">'p'</span>, <span class="hljs-string">'cca'</span>: <span class="hljs-string">'p'</span>, <span class="hljs-string">'ccg'</span>: <span class="hljs-string">'p'</span>,
-  <span class="hljs-string">'ucu'</span>: <span class="hljs-string">'s'</span>, <span class="hljs-string">'ucc'</span>: <span class="hljs-string">'s'</span>, <span class="hljs-string">'uca'</span>: <span class="hljs-string">'s'</span>, <span class="hljs-string">'ucg'</span>: <span class="hljs-string">'s'</span>, <span class="hljs-string">'agu'</span>: <span class="hljs-string">'s'</span>, <span class="hljs-string">'agc'</span>: <span class="hljs-string">'s'</span>,
-  <span class="hljs-string">'acu'</span>: <span class="hljs-string">'t'</span>, <span class="hljs-string">'acc'</span>: <span class="hljs-string">'t'</span>, <span class="hljs-string">'aca'</span>: <span class="hljs-string">'t'</span>, <span class="hljs-string">'acg'</span>: <span class="hljs-string">'t'</span>, <span class="hljs-string">'ugg'</span>: <span class="hljs-string">'w'</span>, <span class="hljs-string">'uau'</span>: <span class="hljs-string">'y'</span>,
-  <span class="hljs-string">'uac'</span>: <span class="hljs-string">'y'</span>, <span class="hljs-string">'guu'</span>: <span class="hljs-string">'v'</span>, <span class="hljs-string">'guc'</span>: <span class="hljs-string">'v'</span>, <span class="hljs-string">'gua'</span>: <span class="hljs-string">'v'</span>, <span class="hljs-string">'gug'</span>: <span class="hljs-string">'v'</span>, <span class="hljs-string">'uaa'</span>: <span class="hljs-string">'*'</span>,
-  <span class="hljs-string">'uga'</span>: <span class="hljs-string">'*'</span>, <span class="hljs-string">'uag'</span>: <span class="hljs-string">'*'</span>
+  <span class="hljs-string">'GUG'</span>: <span class="hljs-string">'V'</span>, <span class="hljs-string">'UAA'</span>: <span class="hljs-string">'*'</span>, <span class="hljs-string">'UGA'</span>: <span class="hljs-string">'*'</span>, <span class="hljs-string">'UAG'</span>: <span class="hljs-string">'*'</span>, <span class="hljs-string">'XAA'</span>: <span class="hljs-string">'X'</span>, <span class="hljs-string">'XAC'</span>: <span class="hljs-string">'X'</span>,
+  <span class="hljs-string">'XAG'</span>: <span class="hljs-string">'X'</span>, <span class="hljs-string">'XAU'</span>: <span class="hljs-string">'X'</span>, <span class="hljs-string">'XCA'</span>: <span class="hljs-string">'X'</span>, <span class="hljs-string">'XCC'</span>: <span class="hljs-string">'X'</span>, <span class="hljs-string">'XCG'</span>: <span class="hljs-string">'X'</span>, <span class="hljs-string">'XCU'</span>: <span class="hljs-string">'X'</span>,
+  <span class="hljs-string">'XGA'</span>: <span class="hljs-string">'X'</span>, <span class="hljs-string">'XGC'</span>: <span class="hljs-string">'X'</span>, <span class="hljs-string">'XGG'</span>: <span class="hljs-string">'X'</span>, <span class="hljs-string">'XGU'</span>: <span class="hljs-string">'X'</span>, <span class="hljs-string">'XUA'</span>: <span class="hljs-string">'X'</span>, <span class="hljs-string">'XUC'</span>: <span class="hljs-string">'X'</span>,
+  <span class="hljs-string">'XUG'</span>: <span class="hljs-string">'X'</span>, <span class="hljs-string">'XUU'</span>: <span class="hljs-string">'X'</span>, <span class="hljs-string">'XAX'</span>: <span class="hljs-string">'X'</span>, <span class="hljs-string">'XCX'</span>: <span class="hljs-string">'X'</span>, <span class="hljs-string">'XGX'</span>: <span class="hljs-string">'X'</span>, <span class="hljs-string">'XUX'</span>: <span class="hljs-string">'X'</span>,
+  <span class="hljs-string">'XXA'</span>: <span class="hljs-string">'X'</span>, <span class="hljs-string">'XXC'</span>: <span class="hljs-string">'X'</span>, <span class="hljs-string">'XXG'</span>: <span class="hljs-string">'X'</span>, <span class="hljs-string">'XXU'</span>: <span class="hljs-string">'X'</span>, <span class="hljs-string">'XXX'</span>: <span class="hljs-string">'X'</span>,
+  <span class="hljs-string">'gcu'</span>: <span class="hljs-string">'a'</span>, <span class="hljs-string">'gcc'</span>: <span class="hljs-string">'a'</span>, <span class="hljs-string">'gca'</span>: <span class="hljs-string">'a'</span>, <span class="hljs-string">'gcg'</span>: <span class="hljs-string">'a'</span>, <span class="hljs-string">'cgu'</span>: <span class="hljs-string">'r'</span>, <span class="hljs-string">'cgc'</span>: <span class="hljs-string">'r'</span>,
+  <span class="hljs-string">'cga'</span>: <span class="hljs-string">'r'</span>, <span class="hljs-string">'cgg'</span>: <span class="hljs-string">'r'</span>, <span class="hljs-string">'aga'</span>: <span class="hljs-string">'r'</span>, <span class="hljs-string">'agg'</span>: <span class="hljs-string">'r'</span>, <span class="hljs-string">'aau'</span>: <span class="hljs-string">'n'</span>, <span class="hljs-string">'aac'</span>: <span class="hljs-string">'n'</span>,
+  <span class="hljs-string">'gau'</span>: <span class="hljs-string">'d'</span>, <span class="hljs-string">'gac'</span>: <span class="hljs-string">'d'</span>, <span class="hljs-string">'ugu'</span>: <span class="hljs-string">'c'</span>, <span class="hljs-string">'ugc'</span>: <span class="hljs-string">'c'</span>, <span class="hljs-string">'caa'</span>: <span class="hljs-string">'q'</span>, <span class="hljs-string">'cag'</span>: <span class="hljs-string">'q'</span>,
+  <span class="hljs-string">'gaa'</span>: <span class="hljs-string">'e'</span>, <span class="hljs-string">'gag'</span>: <span class="hljs-string">'e'</span>, <span class="hljs-string">'ggu'</span>: <span class="hljs-string">'g'</span>, <span class="hljs-string">'ggc'</span>: <span class="hljs-string">'g'</span>, <span class="hljs-string">'gga'</span>: <span class="hljs-string">'g'</span>, <span class="hljs-string">'ggg'</span>: <span class="hljs-string">'g'</span>,
+  <span class="hljs-string">'cau'</span>: <span class="hljs-string">'h'</span>, <span class="hljs-string">'cac'</span>: <span class="hljs-string">'h'</span>, <span class="hljs-string">'auu'</span>: <span class="hljs-string">'i'</span>, <span class="hljs-string">'auc'</span>: <span class="hljs-string">'i'</span>, <span class="hljs-string">'aua'</span>: <span class="hljs-string">'i'</span>, <span class="hljs-string">'uua'</span>: <span class="hljs-string">'l'</span>,
+  <span class="hljs-string">'uug'</span>: <span class="hljs-string">'l'</span>, <span class="hljs-string">'cuu'</span>: <span class="hljs-string">'l'</span>, <span class="hljs-string">'cuc'</span>: <span class="hljs-string">'l'</span>, <span class="hljs-string">'cua'</span>: <span class="hljs-string">'l'</span>, <span class="hljs-string">'cug'</span>: <span class="hljs-string">'l'</span>, <span class="hljs-string">'aaa'</span>: <span class="hljs-string">'k'</span>,
+  <span class="hljs-string">'aag'</span>: <span class="hljs-string">'k'</span>, <span class="hljs-string">'aug'</span>: <span class="hljs-string">'m'</span>, <span class="hljs-string">'uuu'</span>: <span class="hljs-string">'f'</span>, <span class="hljs-string">'uuc'</span>: <span class="hljs-string">'f'</span>, <span class="hljs-string">'ccu'</span>: <span class="hljs-string">'p'</span>, <span class="hljs-string">'ccc'</span>: <span class="hljs-string">'p'</span>,
+  <span class="hljs-string">'cca'</span>: <span class="hljs-string">'p'</span>, <span class="hljs-string">'ccg'</span>: <span class="hljs-string">'p'</span>, <span class="hljs-string">'ucu'</span>: <span class="hljs-string">'s'</span>, <span class="hljs-string">'ucc'</span>: <span class="hljs-string">'s'</span>, <span class="hljs-string">'uca'</span>: <span class="hljs-string">'s'</span>, <span class="hljs-string">'ucg'</span>: <span class="hljs-string">'s'</span>,
+  <span class="hljs-string">'agu'</span>: <span class="hljs-string">'s'</span>, <span class="hljs-string">'agc'</span>: <span class="hljs-string">'s'</span>, <span class="hljs-string">'acu'</span>: <span class="hljs-string">'t'</span>, <span class="hljs-string">'acc'</span>: <span class="hljs-string">'t'</span>, <span class="hljs-string">'aca'</span>: <span class="hljs-string">'t'</span>, <span class="hljs-string">'acg'</span>: <span class="hljs-string">'t'</span>,
+  <span class="hljs-string">'ugg'</span>: <span class="hljs-string">'w'</span>, <span class="hljs-string">'uau'</span>: <span class="hljs-string">'y'</span>, <span class="hljs-string">'uac'</span>: <span class="hljs-string">'y'</span>, <span class="hljs-string">'guu'</span>: <span class="hljs-string">'v'</span>, <span class="hljs-string">'guc'</span>: <span class="hljs-string">'v'</span>, <span class="hljs-string">'gua'</span>: <span class="hljs-string">'v'</span>,
+  <span class="hljs-string">'gug'</span>: <span class="hljs-string">'v'</span>, <span class="hljs-string">'uaa'</span>: <span class="hljs-string">'*'</span>, <span class="hljs-string">'uga'</span>: <span class="hljs-string">'*'</span>, <span class="hljs-string">'uag'</span>: <span class="hljs-string">'*'</span>, <span class="hljs-string">'xaa'</span>: <span class="hljs-string">'x'</span>, <span class="hljs-string">'xac'</span>: <span class="hljs-string">'x'</span>,
+  <span class="hljs-string">'xag'</span>: <span class="hljs-string">'x'</span>, <span class="hljs-string">'xau'</span>: <span class="hljs-string">'x'</span>, <span class="hljs-string">'xca'</span>: <span class="hljs-string">'x'</span>, <span class="hljs-string">'xcc'</span>: <span class="hljs-string">'x'</span>, <span class="hljs-string">'xcg'</span>: <span class="hljs-string">'x'</span>, <span class="hljs-string">'xcu'</span>: <span class="hljs-string">'x'</span>,
+  <span class="hljs-string">'xga'</span>: <span class="hljs-string">'x'</span>, <span class="hljs-string">'xgc'</span>: <span class="hljs-string">'x'</span>, <span class="hljs-string">'xgg'</span>: <span class="hljs-string">'x'</span>, <span class="hljs-string">'xgu'</span>: <span class="hljs-string">'x'</span>, <span class="hljs-string">'xua'</span>: <span class="hljs-string">'x'</span>, <span class="hljs-string">'xuc'</span>: <span class="hljs-string">'x'</span>,
+  <span class="hljs-string">'xug'</span>: <span class="hljs-string">'x'</span>, <span class="hljs-string">'xuu'</span>: <span class="hljs-string">'x'</span>, <span class="hljs-string">'xax'</span>: <span class="hljs-string">'x'</span>, <span class="hljs-string">'xcx'</span>: <span class="hljs-string">'x'</span>, <span class="hljs-string">'xgx'</span>: <span class="hljs-string">'x'</span>, <span class="hljs-string">'xux'</span>: <span class="hljs-string">'x'</span>,
+  <span class="hljs-string">'xxa'</span>: <span class="hljs-string">'x'</span>, <span class="hljs-string">'xxc'</span>: <span class="hljs-string">'x'</span>, <span class="hljs-string">'xxg'</span>: <span class="hljs-string">'x'</span>, <span class="hljs-string">'xxu'</span>: <span class="hljs-string">'x'</span>, <span class="hljs-string">'xxx'</span>: <span class="hljs-string">'x'</span>
 }
 
 _rnaComplementBasesMatrix[<span class="hljs-string">'A'</span>] = <span class="hljs-string">'U'</span>
@@ -163,25 +171,38 @@ _transcribeBasesMatrix[<span class="hljs-string">'t'</span>] = <span class="hljs
               <div class="pilwrap ">
                 <a class="pilcrow" href="#section-7">&#182;</a>
               </div>
-              <p>Takes a sequence and quickly checks if it’s dna or rna.
-<strong>Doesn’t check for mixing errors.</strong></p>
+              <p>Takes a sequence string and checks if it’s DNA, RNA or protein. Follows <a href="http://en.wikipedia.org/wiki/Nucleic_acid_notation#IUPAC_notation">IUPAC notation</a> which allows ambiguous sequence notation. In this case the sequence is labelled as ambiguous nucleotide rather than amino acid sequence.</p>
 <pre><code>bionode.checkSequenceType(<span class="hljs-string">"ATGACCCTGAGAAGAGCACCG"</span>);
 =&gt; <span class="hljs-string">"dna"</span>
 bionode.checkSequenceType(<span class="hljs-string">"AUGACCCUGAAGGUGAAUGAA"</span>);
 =&gt; <span class="hljs-string">"rna"</span>
+bionode.checkSequenceType(<span class="hljs-string">"MAYKSGKRPTFFEVFKAHCSDS"</span>);
+=&gt; <span class="hljs-string">"protein"</span>
+bionode.checkSequenceType(<span class="hljs-string">"AMTGACCCTGAGAAGAGCACCG"</span>);
+=&gt; <span class="hljs-string">"ambiguousDna"</span>
+bionode.checkSequenceType(<span class="hljs-string">"AMUGACCCUGAAGGUGAAUGAA"</span>);
+=&gt; <span class="hljs-string">"ambiguousRna"</span>
 </code></pre>
             </div>
             
             <div class="content"><div class='highlight'><pre>Bionode.prototype.checkSequenceType = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(sequence)</span> {</span>
-  <span class="hljs-keyword">var</span> sequenceTypes = {
-    t: <span class="hljs-string">'dna'</span>,
-    T: <span class="hljs-string">'dna'</span>,
-    u: <span class="hljs-string">'rna'</span>,
-    U: <span class="hljs-string">'rna'</span>
+  <span class="hljs-keyword">var</span> acgMatch = sequence.match(<span class="hljs-regexp">/[ACG]/i</span>);
+  <span class="hljs-keyword">var</span> tMatch = sequence.match(<span class="hljs-regexp">/[T]/i</span>);
+  <span class="hljs-keyword">var</span> nMatch = sequence.match(<span class="hljs-regexp">/[N]/i</span>);
+  <span class="hljs-keyword">var</span> uMatch = sequence.match(<span class="hljs-regexp">/[U]/i</span>);
+  <span class="hljs-keyword">var</span> potentialNucleotideMatch = sequence.match(<span class="hljs-regexp">/[WSMKRYBDHV]/i</span>);
+  <span class="hljs-keyword">var</span> proteinMatch = sequence.match(<span class="hljs-regexp">/[EFIJLOPQZX\*]/i</span>);
+  <span class="hljs-keyword">if</span> (proteinMatch) {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">"protein"</span>;
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (acgMatch &amp;&amp; !potentialNucleotideMatch &amp;&amp; !uMatch) {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">"dna"</span>;
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (acgMatch &amp;&amp; potentialNucleotideMatch &amp;&amp; !uMatch) {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">"ambiguousDna"</span>;
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (acgMatch &amp;&amp; !potentialNucleotideMatch &amp;&amp; uMatch &amp;&amp; !tMatch) {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">"rna"</span>;
+  } <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (acgMatch &amp;&amp; potentialNucleotideMatch &amp;&amp; uMatch &amp;&amp; !tMatch) {
+    <span class="hljs-keyword">return</span> <span class="hljs-string">"ambiguousRna"</span>;
   }
-  <span class="hljs-keyword">var</span> matchBase = sequence.match(<span class="hljs-regexp">/t|T|u|U/</span>)[<span class="hljs-number">0</span>]
-  <span class="hljs-keyword">var</span> sequenceType = sequenceTypes[matchBase]
-  <span class="hljs-keyword">return</span> sequenceType
 }</pre></div></div>
             
         </li>
@@ -198,7 +219,7 @@ bionode.checkSequenceType(<span class="hljs-string">"AUGACCCUGAAGGUGAAUGAA"</spa
             </div>
             
             <div class="content"><div class='highlight'><pre>Bionode.prototype.createComplementBase = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(sequenceType)</span> {</span>
-  <span class="hljs-keyword">var</span> complementBasesMatrix = sequenceType === <span class="hljs-string">'rna'</span> ? _rnaComplementBasesMatrix : _dnaComplementBasesMatrix
+  <span class="hljs-keyword">var</span> complementBasesMatrix = (sequenceType === <span class="hljs-string">'rna'</span> || sequenceType === <span class="hljs-string">'ambiguousRna'</span>) ? _rnaComplementBasesMatrix : _dnaComplementBasesMatrix
   <span class="hljs-keyword">var</span> getComplementBase = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(base)</span> {</span>
     <span class="hljs-keyword">var</span> complement = complementBasesMatrix[base]
     <span class="hljs-keyword">return</span> complement || base
@@ -450,10 +471,10 @@ bionode.transcribe(<span class="hljs-string">"AUGACCCUGAAGGUGAA"</span>); <span 
     sequence = sequenceWithoutIntrons
   }
   <span class="hljs-keyword">var</span> sequenceType = bionode.checkSequenceType(sequence)
-  <span class="hljs-keyword">if</span> (sequenceType === <span class="hljs-string">'dna'</span>) {
+  <span class="hljs-keyword">if</span> (sequenceType === <span class="hljs-string">'dna'</span> || sequenceType === <span class="hljs-string">'ambiguousDna'</span>) {
     <span class="hljs-keyword">return</span> sequence.replace(<span class="hljs-regexp">/t/g</span>, <span class="hljs-string">'u'</span>).replace(<span class="hljs-regexp">/T/g</span>, <span class="hljs-string">'U'</span>)
   }
-  <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (sequenceType === <span class="hljs-string">'rna'</span>) {
+  <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (sequenceType === <span class="hljs-string">'rna'</span> || sequenceType === <span class="hljs-string">'ambiguousRna'</span>) {
     <span class="hljs-keyword">return</span> sequence.replace(<span class="hljs-regexp">/u/g</span>, <span class="hljs-string">'t'</span>).replace(<span class="hljs-regexp">/U/g</span>, <span class="hljs-string">'T'</span>)
   }
 }</pre></div></div>
@@ -498,10 +519,15 @@ bionode.translate(<span class="hljs-string">"ATGACCCTGAAGGTGAATGACAGGAAGCC"</spa
   }
   <span class="hljs-keyword">var</span> sequenceType = bionode.checkSequenceType(sequence)
   <span class="hljs-keyword">var</span> rna
-  <span class="hljs-keyword">if</span> (sequenceType === <span class="hljs-string">'dna'</span>) {
+  <span class="hljs-keyword">if</span> (sequenceType === <span class="hljs-string">'protein'</span>) {
+    <span class="hljs-keyword">return</span> sequence
+  }
+  <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (sequenceType === <span class="hljs-string">'dna'</span> || sequenceType === <span class="hljs-string">'ambiguousDna'</span>) {
+    <span class="hljs-keyword">if</span> (sequenceType === <span class="hljs-string">'ambiguousDna'</span>) sequence.replace(<span class="hljs-regexp">/[wsmkrybdhv]/g</span>, <span class="hljs-string">'x'</span>).replace(<span class="hljs-regexp">/[WSMKRYBDHV]/g</span>, <span class="hljs-string">'X'</span>)
     rna = bionode.transcribe(sequence, exonsRanges)
   }
-  <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (sequenceType === <span class="hljs-string">'rna'</span>) {
+  <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (sequenceType === <span class="hljs-string">'rna'</span> || sequenceType === <span class="hljs-string">'ambiguousRna'</span>) {
+    <span class="hljs-keyword">if</span> (sequenceType === <span class="hljs-string">'ambiguousRna'</span>) sequence.replace(<span class="hljs-regexp">/[wsmkrybdhv]/g</span>, <span class="hljs-string">'x'</span>).replace(<span class="hljs-regexp">/[WSMKRYBDHV]/g</span>, <span class="hljs-string">'X'</span>)
     rna = sequence
   }
   <span class="hljs-keyword">return</span> rna.match(<span class="hljs-regexp">/.{1,3}/g</span>).map(bionode.getTranslatedAA).join(<span class="hljs-string">''</span>)
@@ -703,10 +729,10 @@ bionode.getOpenReadingFrames(<span class="hljs-string">"ATGAGAAGCCCAACATGAGGACTG
             <div class="content"><div class='highlight'><pre>Bionode.prototype.getOpenReadingFrames = <span class="hljs-function"><span class="hljs-keyword">function</span><span class="hljs-params">(sequence)</span> {</span>
   <span class="hljs-keyword">var</span> sequenceType = bionode.checkSequenceType(sequence)
   <span class="hljs-keyword">var</span> stopCodons
-  <span class="hljs-keyword">if</span> (sequenceType === <span class="hljs-string">'dna'</span>) {
+  <span class="hljs-keyword">if</span> (sequenceType === <span class="hljs-string">'dna'</span> || sequenceType === <span class="hljs-string">'ambiguousDna'</span>) {
     stopCodons = [<span class="hljs-string">'TAA'</span>, <span class="hljs-string">'TGA'</span>, <span class="hljs-string">'TAG'</span>, <span class="hljs-string">'taa'</span>, <span class="hljs-string">'tga'</span>, <span class="hljs-string">'tag'</span>]
   }
-  <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (sequenceType === <span class="hljs-string">'rna'</span>) {
+  <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (sequenceType === <span class="hljs-string">'rna'</span> || sequenceType === <span class="hljs-string">'ambiguousRna'</span>) {
     stopCodons = [<span class="hljs-string">'UAA'</span>, <span class="hljs-string">'UGA'</span>, <span class="hljs-string">'UAG'</span>, <span class="hljs-string">'uaa'</span>, <span class="hljs-string">'uga'</span>, <span class="hljs-string">'uag'</span>]
   }
   <span class="hljs-keyword">var</span> openReadingFrames = []
