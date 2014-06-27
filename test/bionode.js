@@ -5,9 +5,12 @@ var data = require('./data')
 require('mocha')
 
 describe("check sequence type", function() {
-  it("should return strings 'dna' or 'rna' from sequence. Doesn't check for mixing errors", function(done) {
+  it("should return strings 'dna', 'rna', 'ambiguousDna', 'ambiguousRna' or 'protein' from sequence following IUPAC guidelines.", function(done) {
     bionode.checkSequenceType(data.dnaSequence).should.equal('dna')
     bionode.checkSequenceType(data.rnaSequence).should.equal('rna')
+    bionode.checkSequenceType(data.ambiguousDnaSequence).should.equal('ambiguousDna')
+    bionode.checkSequenceType(data.ambiguousRnaSequence).should.equal('ambiguousRna')
+    bionode.checkSequenceType(data.exon1Protein).should.equal('protein')
     done()
   })
 })
