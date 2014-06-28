@@ -88,6 +88,36 @@ Having bioinformatic methods available in JavaScript is useful for many reasons,
 
 We intend to use this module in the [afra](//github.com/yeban/afra) project.
 
+Project Status
+--------------
+These are the features we have in mind to have first in short/medium term:
+
+1. Databases
+    1. [NCBI](http://github.com/bionode/bionode-ncbi) (already released, still getting improvements)
+    2. EBI (1-2 devs started working on it)
+    3. ENSEMBL (1-2 devs started working on it)
+2. Wrappers
+    1. BLAST (to do)
+    2. BLAT (to do)
+    3. Bowtie (to do)
+    4. HMMER (to do)
+    5. SRAToolkit (mostly done, needs cleanup/testing before release)
+    6. SAMTOOLS (mostly done, needs cleanup/testing before release)
+    7. BWA (mostly done, needs cleanup/testing before release)
+3. Parsers
+    1. FASTQ
+    3. FASTA (almost done by [Alan Rice](https://github.com/alanrice))
+    4. SAM/BAM (might be adapted from [Dalliance](http://github.com/dasmoth/dalliance) by [Thomas Down](http://github.com/dasmoth))
+    5. VCF/BCF (same as above)
+    6. BED (same as above)
+    7. GFF (could come from JBrowse)
+
+4. Wrangling
+    1. Minimum needed to ensure connectivity between all modules
+    2. Minimum needed to ensure integration with Dat and NoFlo
+
+5. Module/ easy extensibility mechanism
+
 Contacts
 --------
 Bruno Vieira <[mail@bmpvieira.com](mailto:mail@bmpvieira.com)> [@bmpvieira](//twitter.com/bmpvieira)
