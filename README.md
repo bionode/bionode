@@ -5,9 +5,14 @@
   <br/>
   <a href="http://bionode.io/">bionode.io</a>
 </p>
-# bionode [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coveralls Status][coveralls-image]][coveralls-url] [![Dependency Status](https://david-dm.org/bionode/bionode.png?theme=shields.io)](//david-dm.org/bionode/bionode)
-
+# bionode
 > A Node.js JavaScript library for client and server side bioinformatics.
+
+[![NPM version][npm-image]][npm-url]
+[![Build Status][travis-image]][travis-url]
+[![Coveralls Status][coveralls-image]][coveralls-url]
+[![Dependency Status][depstat-image]][depstat-url]
+[![Gitter chat][gitter-image]][gitter-url]
 
 Install
 -------
@@ -76,8 +81,9 @@ projects like [biopython](http://www.biopython.org), [bioruby](http://bioruby.op
 of their methods in JavaScript.
 
 Currently, this project seeks methods to manipulate
-biological data and not to visually represent it, unlike [BioJS](http://www.ebi.ac.uk/Tools/biojs/registry/index.html)
-which is a project of "Reusable components for presenting Biological data".
+biological data and not to visually represent it, ~~unlike [BioJS](http://www.ebi.ac.uk/Tools/biojs/registry/index.html)
+which is a project of "Reusable components for presenting Biological data"~~.
+Update: BioJS 2.0 is aiming to also work server side and currently collaborating with Bionode (see [issue 9](https://github.com/bionode/bionode/issues/9)).
 
 ### Contributors
 Please see the file [contributors.md](contributors.md) for a list.
@@ -118,24 +124,36 @@ These are the features we have in mind to have first in short/medium term:
 
 5. Module/ easy extensibility mechanism
 
+Support
+-------
+
+If you find a bug please use the [issues](http://github.com/bionode/bionode/issues) tracker to report it.  
+If you need help with this particular module, you can use the respective [gitter](http://gitter.im/bionode/bionode) chat room.  
+For general help or discussion about the bionode project, you can use the IRC channel [#bionode](https://www.irccloud.com/#!/ircs://irc.freenode.net:6697/%23bionode) on Freenode.  
+Bionode is collaborating with [BioJS](http://www.ebi.ac.uk/Tools/biojs/registry/index.html) which also has a IRC channel at [#biojs](https://www.irccloud.com/#!/ircs://irc.freenode.net:6697/%23biojs).
+
 Contacts
 --------
-Bruno Vieira <[mail@bmpvieira.com](mailto:mail@bmpvieira.com)> [@bmpvieira](//twitter.com/bmpvieira)
-
+Bruno Vieira <[mail@bmpvieira.com](mailto:mail@bmpvieira.com)> [@bmpvieira](//twitter.com/bmpvieira)  
 Yannick Wurm ([yannick.poulet.org](http://yannick.poulet.org)) [@yannick__](//twitter.com/yannick__)
 
 
 License
 -------
 
-bionode is licensed under the [MIT](https://raw.github.com/bionode/bionode/master/LICENSE) license.
+bionode is licensed under the [MIT](https://raw.github.com/bionode/bionode/master/LICENSE) license.  
+Check [ChooseALicense.com](http://choosealicense.com/licenses/mit) for details.
 
-[npm-url]: //npmjs.org/package/bionode
-[npm-image]: https://badge.fury.io/js/bionode.png
-[travis-url]: //travis-ci.org/bionode/bionode
-[travis-image]: https://travis-ci.org/bionode/bionode.png?branch=master
-[coveralls-url]: //coveralls.io/r/bionode/bionode
-[coveralls-image]: https://coveralls.io/repos/bionode/bionode/badge.png
-[depstat-url]: //david-dm.org/bionode/bionode
-[depstat-image]: https://david-dm.org/bionode/bionode.png
+
+[npm-url]: http://npmjs.org/package/bionode
+[npm-image]: http://img.shields.io/npm/v/bionode.svg?style=flat
+[travis-url]: http:////travis-ci.org/bionode/bionode
+[travis-image]: http://img.shields.io/travis/bionode/bionode.svg?style=flat
+[coveralls-url]: http:////coveralls.io/r/bionode/bionode
+[coveralls-image]: http://img.shields.io/coveralls/bionode/bionode.svg?style=flat
+[depstat-url]: http://david-dm.org/bionode/bionode
+[depstat-image]: http://img.shields.io/david/bionode/bionode.svg?style=flat
+[gitter-image]: http://img.shields.io/badge/gitter-bionode/bionode-brightgreen.svg?style=flat
+[gitter-url]: https://gitter.im/bionode/bionode
+
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/bionode/bionode/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
