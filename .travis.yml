@@ -5,4 +5,8 @@ after_script:
   - npm run coveralls
 notifications:
   slack: loveants:7wx8TkCEYW4RnHj9B7aRUc8E
-  irc: "chat.freenode.net#bionode"
+  irc:
+    channels:
+      - "chat.freenode.net#bionode"
+    template:
+      - "%{message}: %{repository}#%{build_number}: %{commit_message} (%{branch} - %{commit} : %{author})"
