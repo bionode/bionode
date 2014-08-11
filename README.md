@@ -112,7 +112,7 @@ These are the features we have in mind to have first in short/medium term:
     7. BWA (mostly done, needs cleanup/testing before release)
 3. Parsers
     1. FASTQ
-    3. FASTA (almost done by [Alan Rice](https://github.com/alanrice))
+    3. [FASTA](https://github.com/bionode/bionode-fasta)
     4. SAM/BAM (might be adapted from [Dalliance](http://github.com/dasmoth/dalliance) by [Thomas Down](http://github.com/dasmoth))
     5. VCF/BCF (same as above)
     6. BED (same as above)
