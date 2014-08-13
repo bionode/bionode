@@ -130,7 +130,7 @@ Support
 If you find a bug please use the [issues](http://github.com/bionode/bionode/issues) tracker to report it.  
 If you need help with this particular module, you can use the respective [gitter](http://gitter.im/bionode/bionode) chat room.  
 For general help or discussion about the bionode project, you can use the IRC channel [#bionode](https://www.irccloud.com/#!/ircs://irc.freenode.net:6697/%23bionode) on Freenode.  
-Bionode is collaborating with [BioJS](http://www.ebi.ac.uk/Tools/biojs/registry/index.html) which also has a IRC channel at [#biojs](https://www.irccloud.com/#!/ircs://irc.freenode.net:6697/%23biojs).
+Bionode is collaborating with [BioJS](http:/biojs.net) which also has a IRC channel at [#biojs](https://www.irccloud.com/#!/ircs://irc.freenode.net:6697/%23biojs).
 
 Contacts
 --------
