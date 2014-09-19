@@ -1,7 +1,7 @@
 {
   "name": "bionode",
   "description": "A Node.js JavaScript library for client and server side bioinformatics",
-  "version": "0.5.0",
+  "version": "0.5.1",
   "homepage": "http://bionode.io",
   "repository": {
     "type": "git",
