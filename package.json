@@ -1,7 +1,7 @@
 {
   "name": "bionode",
   "description": "A Node.js JavaScript library for client and server side bioinformatics",
-  "version": "0.4.1",
+  "version": "0.5.0",
   "homepage": "http://bionode.io",
   "repository": {
     "type": "git",
@@ -12,26 +12,33 @@
     "email": "mail@bmpvieira.com"
   },
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "bionode-bwa": "0.0.2",
+    "bionode-fasta": "^0.4.1",
+    "bionode-ncbi": "^0.7.0",
+    "bionode-seq": "^0.1.1",
+    "bionode-sra": "^0.2.1",
+    "tape": "^2.14.0"
+  },
   "devDependencies": {
-    "mocha": "~1.17.0",
-    "mocha-lcov-reporter": "0.0.1",
-    "should": "~3.0.1",
-    "istanbul": "~0.2.4",
+    "contributor": "^0.1.16",
     "coveralls": "~2.6.1",
-    "gulp": "~3.4.0",
-    "gulp-util": "~2.2.12",
-    "gulp-livereload": "~0.2.0",
-    "tiny-lr": "0.0.5",
-    "webpack": "~1.0.0-beta8",
     "docco": "~0.6.2",
-    "contributor": "^0.1.16"
+    "doxx": "^0.7.4",
+    "istanbul": "~0.2.4",
+    "request": "^2.44.0",
+    "tap-spec": "^0.2.1",
+    "tape": "^2.14.0"
   },
   "keywords": [
+    "bio",
+    "biology",
     "bioinformatics",
+    "bionode",
     "genomics",
     "genetics",
     "dna",
+    "streams",
     "util",
     "server",
     "client",
@@ -39,7 +46,7 @@
   ],
   "main": "index.js",
   "scripts": {
-    "test": "mocha --reporter spec",
+    "test": "tape node_modules/bionode-*/test/*.js | tap-spec",
     "coverage": "istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- -R spec && rm -rf ./coverage",
     "coveralls": "istanbul cover ./node_modules/.bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/.bin/coveralls && rm -rf ./coverage",
     "build-browser": "webpack",
