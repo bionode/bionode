@@ -43,7 +43,7 @@ var bionode = require('bionode')
 
 In-browser, `bionode` is available as a global variable.
 
-Please read the [documentation](//rawgithub.com/bionode/bionode/master/docs/bionode.html) for the methods exposed by bionode.
+Please read the [documentation](//rawgit.com/bionode/bionode/master/docs/bionode.html) for the methods exposed by bionode.
 
 
 Contributing
