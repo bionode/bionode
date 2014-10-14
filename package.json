@@ -48,6 +48,9 @@
     "browser"
   ],
   "main": "index.js",
+  "bin": {
+    "bionode": "cli.js"
+  },
   "scripts": {
     "test": "tape node_modules/bionode-*/test/*.js | tap-spec",
     "coverage": "istanbul cover test/bionode.js --report lcovonly -- | tap-spec && rm -rf ./coverage",
