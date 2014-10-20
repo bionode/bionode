@@ -13,7 +13,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "bionode-bwa": "0.0.7",
+    "bionode-bwa": "0.0.8",
     "bionode-fasta": "^0.4.2",
     "bionode-ncbi": "^0.8.2",
     "bionode-sam": "0.0.5",
