@@ -13,25 +13,26 @@
   },
   "license": "MIT",
   "dependencies": {
-    "bionode-bwa": "0.0.5",
+    "bionode-bwa": "0.0.7",
     "bionode-fasta": "^0.4.2",
-    "bionode-ncbi": "^0.7.0",
+    "bionode-ncbi": "^0.8.2",
+    "bionode-sam": "0.0.5",
     "bionode-seq": "^0.1.1",
-    "bionode-sra": "^0.2.2"
+    "bionode-sra": "^0.2.5"
   },
   "devDependencies": {
     "async": "^0.9.0",
-    "contributor": "^0.1.16",
-    "coveralls": "~2.6.1",
-    "docco": "~0.6.2",
-    "doxx": "^0.7.4",
+    "contributor": "^0.1.22",
+    "coveralls": "~2.11.2",
+    "docco": "~0.6.3",
+    "doxx": "^1.0.0",
     "glob": "^4.0.6",
-    "istanbul": "~0.2.4",
-    "jsdom": "^1.0.1",
-    "request": "^2.44.0",
-    "tap-spec": "^0.2.1",
-    "tape": "^2.14.0",
-    "tool-stream": "^0.2.0"
+    "istanbul": "~0.3.2",
+    "jsdom": "^1.0.3",
+    "request": "^2.45.0",
+    "tap-spec": "^1.0.1",
+    "tape": "^3.0.1",
+    "tool-stream": "^0.2.1"
   },
   "keywords": [
     "bio",
