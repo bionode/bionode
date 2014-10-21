@@ -18,7 +18,8 @@
     "bionode-ncbi": "^0.8.2",
     "bionode-sam": "0.0.5",
     "bionode-seq": "^0.1.1",
-    "bionode-sra": "^0.2.5"
+    "bionode-sra": "^0.2.5",
+    "minimist": "^1.1.0"
   },
   "devDependencies": {
     "async": "^0.9.0",
