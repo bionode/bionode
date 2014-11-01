@@ -103,7 +103,7 @@ These are the features we have in mind to have first in short/medium term:
     2. EBI (1-2 devs started working on it)
     3. ENSEMBL (1-2 devs started working on it)
 2. Wrappers
-    1. BLAST (to do)
+    1. [BLAST](https://github.com/greenify/biojs-io-blast)
     2. BLAT (to do)
     3. Bowtie (to do)
     4. HMMER (to do)
