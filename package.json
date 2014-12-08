@@ -19,6 +19,7 @@
     "bionode-sam": "1.0.1",
     "bionode-seq": "^0.1.1",
     "bionode-sra": "^1.0.1",
+    "minimist": "^1.1.0",
     "tap-spec": "^2.1.1"
   },
   "devDependencies": {
