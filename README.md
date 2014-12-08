@@ -70,12 +70,13 @@ The following are modules available/planned for Bionode.
 | [JS pipeline]          | Documentation | JavaScript pipeline examples                      | ![request][production]      |  [![bmpvieira][bmpvieira-img]][bmpvieira-url]                         |
 | [Gasket pipeline]      | Documentation | [Gasket] pipeline example                         | ![request][production]      |  [![bmpvieira][bmpvieira-img]][bmpvieira-url]                         |
 | [Dat/Bionode workshop] | Documentation | Online workshop presented at [Mozfest 2014]       | ![request][production]      |  [![bmpvieira][bmpvieira-img]][bmpvieira-url]                         |
+| [ensembl]              | Data access   | Access to [ENSEMBL API]                           | ![request][production]         |  [![nerdstrike][nerdstrike-img]][nerdstrike-url] [![emepyc][emepyc-img]][emepyc-url] [![daviddao][daviddao-img]][daviddao-url] |
+| [blast-parser]                | Parser      | [Basic Local Alignment Search Tool]               | ![request][production]         |  [![greenify][greenify-img]][greenify-url]                         |
 | [sra]                  | Wrappers      | [SRA Toolkit]                                     | ![development][development] |  [![bmpvieira][bmpvieira-img]][bmpvieira-url] [![olgabot][olgabot-img]][olgabot-url] [![mlovci][mlovci-img]][mlovci-url] |
 | [bwa]                  | Wrappers      | [Burrows-Wheeler Aligner]                         | ![development][development] |  [![bmpvieira][bmpvieira-img]][bmpvieira-url]                         |
 | [sam]                  | Wrappers      | [Sequence Alignment/Map tools]                    | ![development][development] |  [![bmpvieira][bmpvieira-img]][bmpvieira-url] [![ekg][ekg-img]][ekg-url] | 
 | [bbi]                  | Parser        | [BBI (bigWig and bigBed)]                         | ![development][development] |  [![bmpvieira][bmpvieira-img]][bmpvieira-url] [![dasmoth][dasmoth-img]][dasmoth-url] |
 | [ebi]                  | Data access   | Access to [EBI API]                               | ![request][request]         |  [![bmpvieira][bmpvieira-img]][bmpvieira-url] [![olgabot][olgabot-img]][olgabot-url] [![mlovci][mlovci-img]][mlovci-url] [![arq5x][arq5x-img]][arq5x-url] |
-| [ensembl]              | Data access   | Access to [ENSEMBL API]                           | ![request][request]         |  [![bmpvieira][bmpvieira-img]][bmpvieira-url] [![olgabot][olgabot-img]][olgabot-url] [![mlovci][mlovci-img]][mlovci-url] [![arq5x][arq5x-img]][arq5x-url] |
 | [semantic]             | Data access   | Access to semantic web resources                  | ![request][request]         |  [![bmpvieira][bmpvieira-img]][bmpvieira-url] [![ktym][ktym-img]][ktym-url] |
 | [vcf]                  | Parser        | [Variant Call Format] parser                      | ![request][request]         |  [![bmpvieira][bmpvieira-img]][bmpvieira-url]                         |
 | [gff]                  | Parser        | [General Feature Format] parser                   | ![request][request]         |  [![bmpvieira][bmpvieira-img]][bmpvieira-url]                         |
@@ -109,7 +110,7 @@ The following are modules available/planned for Bionode.
 [BBI (bigWig and bigBed)]: http://genome.ucsc.edu/FAQ/FAQformat.html
 [ebi]: https://github.com/bionode/bionode-ebi
 [EBI API]: http://www.ebi.ac.uk/Tools/webservices/
-[ensembl]: https://github.com/bionode/bionode-ensembl
+[ensembl]: https://github.com/daviddao/biojs-rest-ensembl
 [ENSEMBL API]: http://rest.ensembl.org
 [semantic]: https://github.com/bionode/bionode-semantic
 [vcf]: https://github.com/bionode/bionode-vcf
@@ -121,6 +122,7 @@ The following are modules available/planned for Bionode.
 [sge]: https://github.com/bionode/bionode-sge
 [SUN Grid Engine]: https://arc.liv.ac.uk/trac/SGE
 [blast]: https://github.com/bionode/bionode-blast
+[blast-parser]: https://github.com/greenify/biojs-io-blast
 [Basic Local Alignment Search Tool]: http://www.ncbi.nlm.nih.gov/books/NBK1763/
 [vsearch]: https://github.com/bionode/bionode-vsearch
 [Search and clustering]: https://github.com/torognes/vsearch
@@ -175,7 +177,14 @@ The following are modules available/planned for Bionode.
 [IsmailM-url]: https://github.com/IsmailM
 [yeban-img]: https://avatars3.githubusercontent.com/u/90373?v=3&s=40
 [yeban-url]: https://github.com/yeban
-
+[nerdstrike-img]: https://avatars3.githubusercontent.com/u/5434501?v=3&s=40
+[nerdstrike-url]: https://github.com/nerdstrike
+[emepyc-img]: https://avatars3.githubusercontent.com/u/473962?v=3&s=40
+[emepyc-url]: https://github.com/emepyc
+[daviddao-img]: https://avatars0.githubusercontent.com/u/1241240?v=3&s=40
+[daviddao-url]: https://github.com/daviddao
+[greenify-img]: https://avatars1.githubusercontent.com/u/4370550?v=3&s=40
+[greenify-url]: https://github.com/greenify
 
 Support
 -------
