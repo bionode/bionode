@@ -13,25 +13,26 @@
   },
   "license": "MIT",
   "dependencies": {
-    "bionode-bwa": "0.0.8",
+    "bionode-bwa": "0.0.9",
     "bionode-fasta": "^0.4.2",
-    "bionode-ncbi": "^0.8.2",
-    "bionode-sam": "0.0.5",
+    "bionode-ncbi": "^1.0.2",
+    "bionode-sam": "1.0.1",
     "bionode-seq": "^0.1.1",
-    "bionode-sra": "^0.2.5"
+    "bionode-sra": "^1.0.1",
+    "tap-spec": "^2.1.1"
   },
   "devDependencies": {
     "async": "^0.9.0",
     "contributor": "^0.1.22",
     "coveralls": "~2.11.2",
     "docco": "~0.6.3",
-    "doxx": "^1.0.0",
-    "glob": "^4.0.6",
-    "istanbul": "~0.3.2",
-    "jsdom": "^1.0.3",
-    "request": "^2.45.0",
-    "tap-spec": "^1.0.1",
-    "tape": "^3.0.1",
+    "doxx": "^1.2.1",
+    "glob": "^4.3.1",
+    "istanbul": "~0.3.5",
+    "jsdom": "^1.4.1",
+    "request": "^2.49.0",
+    "tap-spec": "^2.1.1",
+    "tape": "^3.0.3",
     "tool-stream": "^0.2.1"
   },
   "keywords": [
