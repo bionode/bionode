@@ -198,7 +198,7 @@ Bionode is collaborating with [BioJS](http:/biojs.net) which also has a IRC chan
 
 Contributing
 ------------
-Please see [CONTRIBUTING.md](contributors.md) for how to contribute to this project.  
+Please see [CONTRIBUTING.md](CONTRIBUTING.md) for how to contribute to this project.  
 For a list of contributors, see the file [contributors.md](contributors.md).
 
 
