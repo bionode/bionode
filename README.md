@@ -15,6 +15,7 @@
 [![Coveralls Status][coveralls-image]][coveralls-url]
 [![Dependency Status][depstat-image]][depstat-url]
 [![Gitter chat][gitter-image]][gitter-url]
+[![DOI][doi-image]][doi-url]
 
 Bionode provides pipeable UNIX command line tools and JavaScript APIs for bioinformatic analysis workflows.
 
@@ -223,3 +224,5 @@ Check [ChooseALicense.com](http://choosealicense.com/licenses/mit) for details.
 [depstat-image]: http://img.shields.io/david/bionode/bionode.svg?style=flat-square
 [gitter-image]: http://img.shields.io/badge/gitter-bionode/bionode-brightgreen.svg?style=flat-square
 [gitter-url]: https://gitter.im/bionode/bionode
+[doi-url]: http://dx.doi.org/10.5281/zenodo.11487
+[doi-image]: http://img.shields.io/badge/doi-10.5281/zenodo.11487-blue.svg?style=flat-square
