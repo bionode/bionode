@@ -14,11 +14,11 @@
   "license": "MIT",
   "dependencies": {
     "bionode-bwa": "0.0.9",
-    "bionode-fasta": "^0.4.2",
-    "bionode-ncbi": "^1.0.2",
+    "bionode-fasta": "^0.5.1",
+    "bionode-ncbi": "^1.0.3",
     "bionode-sam": "1.0.1",
     "bionode-seq": "^0.1.1",
-    "bionode-sra": "^1.0.1",
+    "bionode-sra": "^1.0.2",
     "minimist": "^1.1.0",
     "tap-spec": "^2.1.1"
   },
