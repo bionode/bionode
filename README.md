@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/bionode/bionode.png?label=ready&title=Ready)](https://waffle.io/bionode/bionode)
 <p align="center">
 <a href="http://bionode.io">
 <img height="200" width="200" title="bionode" alt="bionode logo" src="https://rawgit.com/bionode/bionode/master/docs/bionode-logo.min.svg"/>
