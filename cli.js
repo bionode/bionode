@@ -24,5 +24,8 @@ var cli = spawn(path, args)
 cli.stdout.pipe(process.stdout)
 cli.stderr.pipe(process.stderr)
 
-if (!process.stdin.isTTY) { process.stdin.pipe(cli.stdin) }
-else { cli.stdin.end() }
+if (argv._[argv._.length - 1] === '-') {
+  process.stdin.pipe(cli.stdin)
+} else {
+  cli.stdin.end()
+}
