@@ -13,12 +13,9 @@
   },
   "license": "MIT",
   "dependencies": {
-    "bionode-bwa": "2.0.0",
     "bionode-fasta": "^0.5.1",
-    "bionode-ncbi": "^1.4.0",
-    "bionode-sam": "1.0.1",
+    "bionode-ncbi": "^1.6.0",
     "bionode-seq": "^0.1.1",
-    "bionode-sra": "^1.0.2",
     "minimist": "^1.1.0"
   },
   "devDependencies": {
@@ -32,6 +29,7 @@
     "glob": "^4.3.1",
     "istanbul": "~0.3.5",
     "jsdom": "^1.4.1",
+    "nock": "^2.17.0",
     "request": "^2.49.0",
     "standard": "^3.3.2",
     "tap-spec": "^2.1.1",
