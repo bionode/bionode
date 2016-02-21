@@ -63,34 +63,36 @@ List of modules
 
 The following are modules available/planned for Bionode.
 
-| Name                   | Type          | Description                                       | Status<sup>1</sup>          | People<sup>2</sup>                                                    |
-|------------------------|---------------|---------------------------------------------------|-----------------------------|-----------------------------------------------------------------------|
-| [ncbi]                 | Data access   | Access to [NCBI API (e-utils)]                    | ![production][production]   |  [![bmpvieira][bmpvieira-img]][bmpvieira-url] [![maxogden][maxogden-img]][maxogden-url] [![mafintosh][mafintosh-img]][mafintosh-url] [![olgabot][olgabot-img]][olgabot-url] [![mlovci][mlovci-img]][mlovci-url] |
-| [fasta]                | Parser        | Fasta parser                                      | ![request][production]      |  [![bmpvieira][bmpvieira-img]][bmpvieira-url]                         |
-| [seq]                  | Wrangling     | Sequence transformation (reverse complement, etc) | ![request][production]      |  [![bmpvieira][bmpvieira-img]][bmpvieira-url] [IsmailM][IsmailM-url] [![yeban][yeban-img]][yeban-url] |
-| [template]             | Documentation | Example template module                           | ![request][production]      |  [![bmpvieira][bmpvieira-img]][bmpvieira-url]                         |
-| [JS pipeline]          | Documentation | JavaScript pipeline examples                      | ![request][production]      |  [![bmpvieira][bmpvieira-img]][bmpvieira-url]                         |
-| [Gasket pipeline]      | Documentation | [Gasket] pipeline example                         | ![request][production]      |  [![bmpvieira][bmpvieira-img]][bmpvieira-url]                         |
-| [Dat/Bionode workshop] | Documentation | Online workshop presented at [Mozfest 2014]       | ![request][production]      |  [![bmpvieira][bmpvieira-img]][bmpvieira-url]                         |
-| [ensembl]              | Data access   | Access to [ENSEMBL API]                           | ![request][production]         |  [![nerdstrike][nerdstrike-img]][nerdstrike-url] [![emepyc][emepyc-img]][emepyc-url] [![daviddao][daviddao-img]][daviddao-url] |
-| [blast-parser]                | Parser      | [Basic Local Alignment Search Tool]               | ![request][production]         |  [![greenify][greenify-img]][greenify-url]                         |
-| [sra]                  | Wrappers      | [SRA Toolkit]                                     | ![development][development] |  [![bmpvieira][bmpvieira-img]][bmpvieira-url] [![olgabot][olgabot-img]][olgabot-url] [![mlovci][mlovci-img]][mlovci-url] |
-| [bwa]                  | Wrappers      | [Burrows-Wheeler Aligner]                         | ![development][development] |  [![bmpvieira][bmpvieira-img]][bmpvieira-url]                         |
-| [sam]                  | Wrappers      | [Sequence Alignment/Map tools]                    | ![development][development] |  [![bmpvieira][bmpvieira-img]][bmpvieira-url] [![ekg][ekg-img]][ekg-url] | 
-| [bbi]                  | Parser        | [BBI (bigWig and bigBed)]                         | ![development][development] |  [![bmpvieira][bmpvieira-img]][bmpvieira-url] [![dasmoth][dasmoth-img]][dasmoth-url] |
-| [ebi]                  | Data access   | Access to [EBI API]                               | ![request][request]         |  [![bmpvieira][bmpvieira-img]][bmpvieira-url] [![olgabot][olgabot-img]][olgabot-url] [![mlovci][mlovci-img]][mlovci-url] [![arq5x][arq5x-img]][arq5x-url] |
-| [semantic]             | Data access   | Access to semantic web resources                  | ![request][request]         |  [![bmpvieira][bmpvieira-img]][bmpvieira-url] [![ktym][ktym-img]][ktym-url] |
-| [vcf]                  | Parser        | [Variant Call Format] parser                      | ![request][request]         |  [![bmpvieira][bmpvieira-img]][bmpvieira-url]                         |
-| [gff]                  | Parser        | [General Feature Format] parser                   | ![request][request]         |  [![bmpvieira][bmpvieira-img]][bmpvieira-url]                         |
-| [bowtie]               | Wrappers      | [Bowtie aligner]                                  | ![request][request]         |  [![bmpvieira][bmpvieira-img]][bmpvieira-url]                         |
-| [sge]                  | Wrappers      | [Sun Grid Engine]                                 | ![request][request]         |  [![bmpvieira][bmpvieira-img]][bmpvieira-url] [![maxogden][maxogden-img]][maxogden-url] [![ekg][ekg-img]][ekg-url] [![gawbul][gawbul-img]][gawbul-url] [![mkuzak][mkuzak-img]][mkuzak-url] [badryan][badryan-url] |
-| [blast]                | Wrappers      | [Basic Local Alignment Search Tool]               | ![request][request]         |  [![bmpvieira][bmpvieira-img]][bmpvieira-url]                         |
-| [vsearch]              | Wrappers      | [Search and clustering]                           | ![request][request]         |  [![bmpvieira][bmpvieira-img]][bmpvieira-url]                         |
-| [khmer]                | Wrappers      | [k-mer counting & filtering]                      | ![request][request]         |  [![bmpvieira][bmpvieira-img]][bmpvieira-url]                         |
-| [rsem]                 | Wrappers      | [RNA-Seq by Expectation-Maximization]             | ![request][request]         |  [![olgabot][olgabot-img]][olgabot-url]                               |
-| [gmap]                 | Wrappers      | [Genomic Mapping and Alignment Program]           | ![request][request]         |  [![olgabot][olgabot-img]][olgabot-url]                               |
-| [star]                 | Wrappers      | [Spliced Transcripts Alignment to a Reference]    | ![request][request]         |  [![olgabot][olgabot-img]][olgabot-url]                               |
-| [go]                   | Wrappers      | [Gene ontology]                                   | ![request][request]         |  [badryan][badryan-url]                               |
+| Name                   | Type          | Description                                       | Status<sup>1</sup>          | People<sup>2</sup>                                                                                                                                                                                               |
+|:-----------------------|:--------------|:--------------------------------------------------|:----------------------------|:-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [ncbi]                 | Data access   | Access to [NCBI API (e-utils)]                    | ![production][production]   | [![bmpvieira][bmpvieira-img]][bmpvieira-url] [![maxogden][maxogden-img]][maxogden-url] [![mafintosh][mafintosh-img]][mafintosh-url] [![olgabot][olgabot-img]][olgabot-url] [![mlovci][mlovci-img]][mlovci-url]   |
+| [fasta]                | Parser        | Fasta parser                                      | ![request][production]      | [![bmpvieira][bmpvieira-img]][bmpvieira-url]                                                                                                                                                                     |
+| [seq]                  | Wrangling     | Sequence transformation (reverse complement, etc) | ![request][production]      | [![bmpvieira][bmpvieira-img]][bmpvieira-url] [IsmailM][IsmailM-url] [![yeban][yeban-img]][yeban-url]                                                                                                             |
+| [template]             | Documentation | Example template module                           | ![request][production]      | [![bmpvieira][bmpvieira-img]][bmpvieira-url]                                                                                                                                                                     |
+| [JS pipeline]          | Documentation | JavaScript pipeline examples                      | ![request][production]      | [![bmpvieira][bmpvieira-img]][bmpvieira-url]                                                                                                                                                                     |
+| [Gasket pipeline]      | Documentation | [Gasket] pipeline example                         | ![request][production]      | [![bmpvieira][bmpvieira-img]][bmpvieira-url]                                                                                                                                                                     |
+| [Dat/Bionode workshop] | Documentation | Online workshop presented at [Mozfest 2014]       | ![request][production]      | [![bmpvieira][bmpvieira-img]][bmpvieira-url]                                                                                                                                                                     |
+| [ensembl]              | Data access   | Access to [ENSEMBL API]                           | ![request][production]      | [![nerdstrike][nerdstrike-img]][nerdstrike-url] [![emepyc][emepyc-img]][emepyc-url] [![daviddao][daviddao-img]][daviddao-url]                                                                                    |
+| [blast-parser]         | Parser        | [Basic Local Alignment Search Tool]               | ![request][production]      | [![greenify][greenify-img]][greenify-url]                                                                                                                                                                        |
+| [sra]                  | Wrappers      | [SRA Toolkit]                                     | ![development][development] | [![bmpvieira][bmpvieira-img]][bmpvieira-url] [![olgabot][olgabot-img]][olgabot-url] [![mlovci][mlovci-img]][mlovci-url]                                                                                          |
+| [bwa]                  | Wrappers      | [Burrows-Wheeler Aligner]                         | ![development][development] | [![bmpvieira][bmpvieira-img]][bmpvieira-url]                                                                                                                                                                     |
+| [sam]                  | Wrappers      | [Sequence Alignment/Map tools]                    | ![development][development] | [![bmpvieira][bmpvieira-img]][bmpvieira-url] [![ekg][ekg-img]][ekg-url]                                                                                                                                          |
+| [bbi]                  | Parser        | [BBI (bigWig and bigBed)]                         | ![development][development] | [![bmpvieira][bmpvieira-img]][bmpvieira-url] [![dasmoth][dasmoth-img]][dasmoth-url]                                                                                                                              |
+| [obo]                  | Parser        | [OBO 1.2] streaming parser                        | ![development][development] | [![thejmazz][thejmazz-img]][thejmazz-url]                                                                                                                                                                        |
+| [quickgo]              | Data access   | Acess to [EBI QuickGO]                            | ![development][development] | [![thejmazz][thejmazz-img]][thejmazz-url]                                                                                                                                                                        |
+| [ebi]                  | Data access   | Access to [EBI API]                               | ![request][request]         | [![bmpvieira][bmpvieira-img]][bmpvieira-url] [![olgabot][olgabot-img]][olgabot-url] [![mlovci][mlovci-img]][mlovci-url] [![arq5x][arq5x-img]][arq5x-url]                                                         |
+| [semantic]             | Data access   | Access to semantic web resources                  | ![request][request]         | [![bmpvieira][bmpvieira-img]][bmpvieira-url] [![ktym][ktym-img]][ktym-url]                                                                                                                                       |
+| [vcf]                  | Parser        | [Variant Call Format] parser                      | ![request][request]         | [![bmpvieira][bmpvieira-img]][bmpvieira-url]                                                                                                                                                                     |
+| [gff]                  | Parser        | [General Feature Format] parser                   | ![request][request]         | [![bmpvieira][bmpvieira-img]][bmpvieira-url]                                                                                                                                                                     |
+| [bowtie]               | Wrappers      | [Bowtie aligner]                                  | ![request][request]         | [![bmpvieira][bmpvieira-img]][bmpvieira-url]                                                                                                                                                                     |
+| [sge]                  | Wrappers      | [Sun Grid Engine]                                 | ![request][request]         | [![bmpvieira][bmpvieira-img]][bmpvieira-url] [![maxogden][maxogden-img]][maxogden-url] [![ekg][ekg-img]][ekg-url] [![gawbul][gawbul-img]][gawbul-url] [![mkuzak][mkuzak-img]][mkuzak-url] [badryan][badryan-url] |
+| [blast]                | Wrappers      | [Basic Local Alignment Search Tool]               | ![request][request]         | [![bmpvieira][bmpvieira-img]][bmpvieira-url]                                                                                                                                                                     |
+| [vsearch]              | Wrappers      | [Search and clustering]                           | ![request][request]         | [![bmpvieira][bmpvieira-img]][bmpvieira-url]                                                                                                                                                                     |
+| [khmer]                | Wrappers      | [k-mer counting & filtering]                      | ![request][request]         | [![bmpvieira][bmpvieira-img]][bmpvieira-url]                                                                                                                                                                     |
+| [rsem]                 | Wrappers      | [RNA-Seq by Expectation-Maximization]             | ![request][request]         | [![olgabot][olgabot-img]][olgabot-url]                                                                                                                                                                           |
+| [gmap]                 | Wrappers      | [Genomic Mapping and Alignment Program]           | ![request][request]         | [![olgabot][olgabot-img]][olgabot-url]                                                                                                                                                                           |
+| [star]                 | Wrappers      | [Spliced Transcripts Alignment to a Reference]    | ![request][request]         | [![olgabot][olgabot-img]][olgabot-url]                                                                                                                                                                           |
+| [go]                   | Wrappers      | [Gene ontology]                                   | ![request][request]         | [badryan][badryan-url]                                                                                                                                                                                           |
 
 [ncbi]: https://github.com/bionode/bionode-ncbi
 [NCBI API (e-utils)]: http://www.ncbi.nlm.nih.gov/books/NBK25501/
@@ -110,6 +112,10 @@ The following are modules available/planned for Bionode.
 [Sequence Alignment/Map tools]: http://www.htslib.org
 [bbi]: https://github.com/bionode/bionode-bbi
 [BBI (bigWig and bigBed)]: http://genome.ucsc.edu/FAQ/FAQformat.html
+[obo]: https://github.com/bionode/bionode-obo
+[OBO 1.2]: http://oboformat.googlecode.com/svn/trunk/doc/GO.format.obo-1_2.html
+[quickgo]: https://github.com/bionode/quickgo
+[EBI QuickGo]: https://www.ebi.ac.uk/QuickGO/WebServices.html
 [ebi]: https://github.com/bionode/bionode-ebi
 [EBI API]: http://www.ebi.ac.uk/Tools/webservices/
 [ensembl]: https://github.com/daviddao/biojs-rest-ensembl
@@ -141,7 +147,7 @@ The following are modules available/planned for Bionode.
 
 
 [1]: Current status of the module
-* ![production][production] means the module is still in development but has many features complete and is used intensively. 
+* ![production][production] means the module is still in development but has many features complete and is used intensively.
 * ![development][development] means the module still lacks some features, tests or has some issues.
 * ![request][request] means the module has been requested, discussed and planned, but is not yet implemented.
 
@@ -187,6 +193,8 @@ The following are modules available/planned for Bionode.
 [daviddao-url]: https://github.com/daviddao
 [greenify-img]: https://avatars1.githubusercontent.com/u/4370550?v=3&s=40
 [greenify-url]: https://github.com/greenify
+[thejmazz-img]: https://avatars3.githubusercontent.com/u/1270998?v=3&s=40
+[thejmazz-url]: https://github.com/thejmazz
 
 Support
 -------
