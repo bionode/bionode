@@ -29,3 +29,7 @@ if (argv._[argv._.length - 1] === '-') {
 } else {
   cli.stdin.end()
 }
+
+process.stdout.on('error', function (err) {
+  if (err.code === 'EPIPE') { process.exit(0) }
+})
