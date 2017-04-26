@@ -1,8 +1,6 @@
 language: node_js
 node_js:
-  - "0.10"
-after_script:
-  - npm run coveralls
+  - "7"
 notifications:
   slack: loveants:7wx8TkCEYW4RnHj9B7aRUc8E
   irc:
