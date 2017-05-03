@@ -53,8 +53,8 @@
   ],
   "main": "index.js",
   "bin": {
-    "bionode-ncbi": "bionode-ncbi",
-    "bionode-fasta": "bionode-fasta"
+    "bionode-ncbi": "node_modules/.bin/bionode-ncbi",
+    "bionode-fasta": "node_modules/.bin/bionode-fasta"
   },
   "scripts": {
     "test": "cd node_modules && for i in bionode*; do cd $i && npm test && cd ..; done",
