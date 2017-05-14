@@ -64,6 +64,8 @@ Don't be shy! Come talk to us :smiley:
 * **IRC** #bionode on Freenode
 * **Twitter** [@bionode](http://twitter.com/@bionode)
 
+## Who's using Bionode?
+For a list of some projects or institutions that we know of, check the [USERS.md](USERS.md) file. If you think you should be on that list or know who should, let us know! :D
 
 ## Acknowledgements
 We would like to thank all the people and institutions listed below!
