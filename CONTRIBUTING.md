@@ -1,6 +1,6 @@
 # Contributing to Bionode
 
-Thank you for your interest in contributing to Bionode :tada:!
+Thank you for your interest in [contributing to Bionode and joining us](CONTRIBUTORS.md) :tada:!
 
 Bionode is an Open Source community that aims at building highly reusable code and tools for bioinformatics by leveraging the Node.JS ecosystem. We use Node.JS Streams to process big genomic data.
 
