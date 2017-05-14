@@ -1,0 +1,321 @@
+{
+  "projectName": "bionode",
+  "projectOwner": "bionode",
+  "files": [
+    "CONTRIBUTORS.md",
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "contributors": [
+    {
+      "login": "bmpvieira",
+      "name": "Bruno Vieira",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/263386?v=3",
+      "profile": "http://bmpvieira.com",
+      "contributions": [
+        "blog",
+        "bug",
+        "code",
+        "design",
+        "doc",
+        "eventOrganizing",
+        "example",
+        "financial",
+        "fundingFinding",
+        "infra",
+        "question",
+        "review",
+        "talk",
+        "test",
+        "tool",
+        "video"
+      ]
+    },
+    {
+      "login": "thejmazz",
+      "name": "Julian Mazzitelli",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/1270998?v=3",
+      "profile": "https://jmazz.me",
+      "contributions": [
+        "blog",
+        "bug",
+        "code",
+        "doc",
+        "example",
+        "financial",
+        "question",
+        "review",
+        "talk",
+        "test",
+        "tool"
+      ]
+    },
+    {
+      "login": "Istar-Eldritch",
+      "name": "Ruben Paz",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/3746468?v=3",
+      "profile": "https://ruben.io",
+      "contributions": [
+        "bug",
+        "code",
+        "eventOrganizing",
+        "infra",
+        "question",
+        "test"
+      ]
+    },
+    {
+      "login": "IsmailM",
+      "name": "Ismail Moghul",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/5578375?v=3",
+      "profile": "https://github.com/IsmailM",
+      "contributions": [
+        "bug",
+        "code",
+        "doc",
+        "infra",
+        "review",
+        "test"
+      ]
+    },
+    {
+      "login": "tiagofilipe12",
+      "name": "Tiago Jesus",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/6191251?v=3",
+      "profile": "https://github.com/tiagofilipe12",
+      "contributions": [
+        "bug",
+        "code",
+        "doc",
+        "financial",
+        "question",
+        "review"
+      ]
+    },
+    {
+      "login": "wookoouk",
+      "name": "Martin Page",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/445964?v=3",
+      "profile": "http://twitter.com/wookoouk",
+      "contributions": [
+        "code",
+        "doc",
+        "infra",
+        "tool"
+      ]
+    },
+    {
+      "login": "maxogden",
+      "name": "=^._.^=",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/39759?v=3",
+      "profile": "http://maxogden.com",
+      "contributions": [
+        "bug",
+        "code",
+        "question",
+        "talk"
+      ]
+    },
+    {
+      "login": "yannickwurm",
+      "name": "Yannick Wurm",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/150113?v=3",
+      "profile": "http://wurmlab.github.io",
+      "contributions": [
+        "bug",
+        "doc",
+        "financial",
+        "question"
+      ]
+    },
+    {
+      "login": "alanrice",
+      "name": "Alan Rice",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/11898?v=3",
+      "profile": "http://alanrice.ie",
+      "contributions": [
+        "bug",
+        "code",
+        "doc",
+        "question"
+      ]
+    },
+    {
+      "login": "adrianalexa",
+      "name": "Adrian Alexa",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/1910746?v=3",
+      "profile": "http://repositive.io",
+      "contributions": [
+        "eventOrganizing",
+        "financial",
+        "question"
+      ]
+    },
+    {
+      "login": "mkuzak",
+      "name": "Mateusz Kuzak",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/208443?v=3",
+      "profile": "https://github.com/mkuzak",
+      "contributions": [
+        "bug",
+        "code",
+        "question"
+      ]
+    },
+    {
+      "login": "gawbul",
+      "name": "Steve Moss",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/321291?v=3",
+      "profile": "https://www.gawbul.io",
+      "contributions": [
+        "code",
+        "infra",
+        "question"
+      ]
+    },
+    {
+      "login": "mafintosh",
+      "name": "Mathias Buus",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/376661?v=3",
+      "profile": "https://github.com/mafintosh",
+      "contributions": [
+        "bug",
+        "code",
+        "question"
+      ]
+    },
+    {
+      "login": "yeban",
+      "name": "Anurag Priyam",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/90373?v=3",
+      "profile": "http://wurmlab.github.io/team/priyam",
+      "contributions": [
+        "bug",
+        "question"
+      ]
+    },
+    {
+      "login": "terfilip",
+      "name": "Filip Tér",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/6852065?v=3",
+      "profile": "https://github.com/terfilip",
+      "contributions": [
+        "code",
+        "doc"
+      ]
+    },
+    {
+      "login": "ekg",
+      "name": "Erik Garrison",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/145425?v=3",
+      "profile": "https://github.com/ekg",
+      "contributions": [
+        "eventOrganizing",
+        "question"
+      ]
+    },
+    {
+      "login": "olgabot",
+      "name": "Olga Botvinnik",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/806256?v=3",
+      "profile": "http://www.olgabotvinnik.com",
+      "contributions": [
+        "bug",
+        "question"
+      ]
+    },
+    {
+      "login": "c089",
+      "name": "Christoph Neuroth",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/327199?v=3",
+      "profile": "https://github.com/c089",
+      "contributions": [
+        "code",
+        "question"
+      ]
+    },
+    {
+      "login": "shyamrallapalli",
+      "name": "Shyam Rallapalli",
+      "avatar_url": "https://avatars3.githubusercontent.com/u/3543099?v=3",
+      "profile": "https://github.com/shyamrallapalli",
+      "contributions": [
+        "code",
+        "tool"
+      ]
+    },
+    {
+      "login": "manuelcorpas",
+      "name": "manuelcorpas",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/383303?v=3",
+      "profile": "https://github.com/manuelcorpas",
+      "contributions": [
+        "question"
+      ]
+    },
+    {
+      "login": "wilzbach",
+      "name": "Sebastian Wilzbach",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/4370550?v=3",
+      "profile": "https://seb.wilzba.ch",
+      "contributions": [
+        "question"
+      ]
+    },
+    {
+      "login": "dasmoth",
+      "name": "Thomas Down",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/209047?v=3",
+      "profile": "https://github.com/dasmoth",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "roddypr",
+      "name": "Rodrigo Pracana",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/4202413?v=3",
+      "profile": "http://www.sbcs.qmul.ac.uk/staff/rodrigopracana.html",
+      "contributions": [
+        "question"
+      ]
+    },
+    {
+      "login": "simplesquare1",
+      "name": "Jana Grajciarova",
+      "avatar_url": "https://avatars1.githubusercontent.com/u/13767979?v=3",
+      "profile": "https://github.com/simplesquare1",
+      "contributions": [
+        "eventOrganizing"
+      ]
+    },
+    {
+      "login": "bfrgoncalves",
+      "name": "Bruno Gonçalves",
+      "avatar_url": "https://avatars2.githubusercontent.com/u/5382566?v=3",
+      "profile": "https://github.com/bfrgoncalves",
+      "contributions": [
+        "question"
+      ]
+    },
+    {
+      "login": "arq5x",
+      "name": "Aaron Quinlan",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/72291?v=3",
+      "profile": "http://quinlanlab.org",
+      "contributions": [
+        "question"
+      ]
+    },
+    {
+      "login": "Rudani",
+      "name": "Rudani",
+      "avatar_url": "https://avatars0.githubusercontent.com/u/26908848?v=3",
+      "profile": "https://github.com/Rudani",
+      "contributions": [
+        "code"
+      ]
+    }
+  ]
+}
