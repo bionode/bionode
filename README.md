@@ -6,6 +6,7 @@
   <a href="http://bionode.io/">bionode.io</a>
 </p>
 
+
 # bionode
 
 > Modular and universal bioinformatics
@@ -16,8 +17,7 @@
 [![Dependencies](http://img.shields.io/david/bionode/bionode.svg?style=flat-square)](http://david-dm.org/bionode/bionode)
 [![npm](https://img.shields.io/npm/dt/bionode.svg?style=flat-square)](https://www.npmjs.com/package/bionode)
 [![Gitter](https://img.shields.io/gitter/room/nwjs/nw.js.svg?style=flat-square)](https://gitter.im/bionode/bionode)
-[![All Contributors](https://img.shields.io/badge/all_contributors-27-orange.svg?style=flat-square)](CONTRIBUTORS.md)
-[![Cite](http://img.shields.io/badge/doi-10.5281/zenodo.11487-blue.svg?style=flat-square)](http://dx.doi.org/10.5281/zenodo.11487)
+
 
 ## Install
 
@@ -44,16 +44,22 @@ Or, if you want to use it as a JavaScript library, you need to install it in you
 ```bash
 npm i bionode # 'i' can be used as shorcut to 'install'
 ```
+
+
 ## Documentation
 
 Check our documentation at [doc.bionode.io](http://doc.bionode.io)
+
 
 ## Modules list
 
 For a complete list of bionode modules, please check the [repositories with the "tool" tag](https://github.com/search?q=org:bionode+topic:tool)
 
+
 ## Contributing
+
 We welcome all kinds of contributions at all levels of experience, please read the [CONTRIBUTING.md](CONTRIBUTING.md) to get started!
+
 
 ## Communication channels
 
@@ -64,10 +70,14 @@ Don't be shy! Come talk to us :smiley:
 * **IRC** #bionode on Freenode
 * **Twitter** [@bionode](http://twitter.com/@bionode)
 
+
 ## Who's using Bionode?
+
 For a list of some projects or institutions that we know of, check the [USERS.md](USERS.md) file. If you think you should be on that list or know who should, let us know! :D
 
+
 ## Acknowledgements
+
 We would like to thank all the people and institutions listed below!
 
 * [bionode/people](https://github.com/orgs/bionode/people)
